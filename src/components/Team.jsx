@@ -15,6 +15,7 @@ import SMH from "../assets/team/SMH.jpg";
 import PH from "../assets/team/PH.jpg";
 import T from "../assets/team/T.jpg";
 
+// https://colorhunt.co/palette/3e5f445e936c93da97e8ffd7
 
 const boardMembers = [
   {
@@ -203,23 +204,23 @@ const getRoleColor = (role) => {
   }
 };
 
-const getRoleIcon = (role) => {
-  switch(role) {
-    case 'President': return '👑';
-    case 'Vice President': return '🥈';
-    case 'Technical Director': return '⚡';
-    case 'Marketing Head': return '📊';
-    case 'Software Developer': return '💻';
-    case 'General Secretary': return '📋';
-    case 'Managing Director': return '📊';
-    case 'Tech Head': return '⚡';
-    case 'Public Relations Officer': return '🤝';
-    case 'Social Media Head': return '📱';
-    case 'Publicity Head': return '📢';
-    case 'Treasurer': return '💰';
-    default: return '👤';
-  }
-};
+// const getRoleIcon = (role) => {
+//   switch(role) {
+//     case 'President': return '👑';
+//     case 'Vice President': return '🥈';
+//     case 'Technical Director': return '⚡';
+//     case 'Marketing Head': return '📊';
+//     case 'Software Developer': return '💻';
+//     case 'General Secretary': return '📋';
+//     case 'Managing Director': return '📊';
+//     case 'Tech Head': return '⚡';
+//     case 'Public Relations Officer': return '🤝';
+//     case 'Social Media Head': return '📱';
+//     case 'Publicity Head': return '📢';
+//     case 'Treasurer': return '💰';
+//     default: return '👤';
+//   }
+// };
 
 // Individual Member Card Component
 const BoardMemberCard = ({ member, onMemberClick }) => {
