@@ -1,67 +1,193 @@
 import React, { useState, useEffect } from 'react';
+import President from "../assets/team/P.jpg";
+import VicePresident from "../assets/team/ViceP.jpg";
+import GS1 from "../assets/team/GS1.jpg";
+import GS2 from "../assets/team/GS2.jpg";
+import MD1 from "../assets/team/MD1.jpg";
+import MD2 from "../assets/team/MD2.jpg";
+import TH1 from "../assets/team/TH1.jpg";
+import TH2 from "../assets/team/TH2.jpg";
+import PRO1 from "../assets/team/PRO1.jpg";
+import PRO2 from "../assets/team/PRO2.jpg";
+import SD1 from "../assets/team/SD1.jpg";
+import SD2 from "../assets/team/SD2.jpg";
+import SMH from "../assets/team/SMH.jpg";
+import PH from "../assets/team/PH.jpg";
+import T from "../assets/team/T.jpg";
+
 
 const boardMembers = [
   {
     id: 1,
-    name: "Ayush Patel",
-    title: "Vice President",
-    image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&q=80",
+    name: "Prakhar Parikh",
+    title: "President",
+    image: President,
     bio: "Leading cybersecurity initiatives with a focus on ethical hacking and threat analysis.",
     social: {
-      github: "https://github.com/ap0309",
-      linkedin: "https://linkedin.com"
+      // github: "https://www.github.com/prakhar-thecoder",
+      linkedin: "https://www.linkedin.com/in/prakhar-parikh/"
     }
   },
   {
     id: 2,
-    name: "Sarah Johnson",
-    title: "President",
-    image: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&q=80",
+    name: "Ketan Dav",
+    title: "Vice President",
+    image: VicePresident,
     bio: "Leading the club with a vision to make Nirma University a cybersecurity hub.",
     social: {
-      github: "https://github.com",
-      linkedin: "https://linkedin.com"
+      // github: "https://github.com",
+      linkedin: "https://www.linkedin.com/in/ketandav/"
     }
   },
   {
     id: 3,
-    name: "Michael Chen",
-    title: "Technical Director",
-    image: "https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&q=80",
+    name: "Aum Patel",
+    title: "General Secretary",
+    image: GS1,
     bio: "Developing secure applications and tools for the club. Expert in web security and secure coding practices.",
     social: {
-      github: "https://github.com",
-      linkedin: "https://linkedin.com"
+      // github: "https://github.com/AUM2209",
+      linkedin: "https://www.linkedin.com/in/aum-patel-93b686284/"
     }
   },
   {
     id: 4,
-    name: "Emma Williams",
-    title: "Marketing Head",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&q=80",
+    name: "Het Pandya",
+    title: "General Secretary",
+    image: GS2,
     bio: "Full-stack developer with focus on building cybersecurity tools and educational platforms for the club.",
     social: {
-      github: "https://github.com",
-      linkedin: "https://linkedin.com"
+      // github: "https://github.com",
+      linkedin: "https://www.linkedin.com/in/het-pandya-846464226/"
     }
   },
   {
     id: 5,
-    name: "Eh ih",
-    title: "Marketing Head",
-    image: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=300&q=80",
+    name: "Ketav Shah",
+    title: "Managing Director",
+    image: MD1,
     bio: "uilding cybersecurity tools and educational platforms for the club.",
     social: {
-      github: "https://github.com",
-      linkedin: "https://linkedin.com"
+      // github: "https://github.com/ketavshah30",
+      linkedin: "https://www.linkedin.com/in/ketav-shah-3ab74629b/"
     }
-  }
+  },
+  {
+    id: 6,
+    name: "Dhruval Patel",
+    title: "Managing Director",
+    image: MD2,
+    bio: "uilding cybersecurity tools and educational platforms for the club.",
+    social: {
+      // github: "https://github.com",
+      linkedin: "https://www.linkedin.com/in/dhruvalpatel2804/"
+    }
+  },
+  {
+    id: 7,
+    name: "Devarsh Dalwadi",
+    title: "Technical Head",
+    image: TH1,
+    bio: "uilding cybersecurity tools and educational platforms for the club.",
+    social: {
+      // github: "https://github.com/Red0psD3v4rsh007",
+      linkedin: "https://www.linkedin.com/in/devarshdalwadi/"
+    }
+  },
+  {
+    id: 8,
+    name: "Dhruv Padhiyaar",
+    title: "Technical Head",
+    image: TH2,
+    bio: "uilding cybersecurity tools and educational platforms for the club.",
+    social: {
+      // github: "https://github.com/dhruv-programmes",
+      linkedin: "https://www.linkedin.com/in/dhruvpadhiyar/"
+    }
+  },
+  {
+    id: 9,
+    name: "Ishan Wadhwa",
+    title: "Public Relations Officer",
+    image: PRO1,
+    bio: "uilding cybersecurity tools and educational platforms for the club.",
+    social: {
+      // github: "",
+      linkedin: "https://www.linkedin.com/in/ishan-wadhwa-5670a8309/"
+    }
+  },
+  {
+    id: 10,
+    name: "Hiya Vashi",
+    title: "Public Relations Officer",
+    image: PRO2,
+    bio: "uilding cybersecurity tools and educational platforms for the club.",
+    social: {
+      // github: "https://github.com/HiyaVashi",
+      linkedin: "https://www.linkedin.com/in/hiya-vashi-47257636a/"
+    }
+  },
+  {
+    id: 11,
+    name: "Aksh Patel",
+    title: "Software Developer",
+    image: SD1,
+    bio: "uilding cybersecurity tools and educational platforms for the club.",
+    social: {
+      // github: "https://github.com/Aksh015",
+      linkedin: "https://www.linkedin.com/in/aksh-patel158/"
+    }
+  },
+  {
+    id: 12,
+    name: "Jiya Patel",
+    title: "Software Developer",
+    image: SD2,
+    bio: "uilding cybersecurity tools and educational platforms for the club.",
+    social: {
+      // github: "https://github.com/jiyaa-patel",
+      linkedin: "https://www.linkedin.com/in/jiya-patel-919497321/"
+    }
+  },
+  {
+    id: 13,
+    name: "Misari Lakhani",
+    title: "Social Media Head",
+    image: SMH,
+    bio: "uilding cybersecurity tools and educational platforms for the club.",
+    social: {
+      // github: "https://github.com/misarilakhani",
+      linkedin: "https://www.linkedin.com/in/misari-lakhani-5ab51431b/"
+    }
+  },
+  {
+    id: 14,
+    name: "Dhruv Matariya",
+    title: "Publicity Head",
+    image: PH,
+    bio: "uilding cybersecurity tools and educational platforms for the club.",
+    social: {
+      // github: "https://github.com/DhruvMatariya",
+      linkedin: "https://www.linkedin.com/in/dhruv-matariya-1966a6325/"
+    }
+  },
+  {
+    id: 15,
+    name: "Hrushiraj Patel",
+    title: "Treasurer",
+    image: T,
+    bio: "uilding cybersecurity tools and educational platforms for the club.",
+    social: {
+      // github: "https://github.com/hrushiraj19",
+      linkedin: "https://www.linkedin.com/in/hrushiraj-patel-182575322/"
+    }
+  },
 ];
 
 // Role styling functions with better contrasting colors
 const getRoleColor = (role) => {
   switch(role) {
-    // case 'President': return 'bg-gradient-to-r from-yellow-400 to-amber-500 text-gray-900';
+    // case 'President': return 'bg-gradient-to-r from-blue-400 to-cyan-500 text-white';
     // case 'Vice President': return 'bg-gradient-to-r from-blue-400 to-cyan-500 text-white';
     // case 'Technical Director': return 'bg-gradient-to-r from-purple-400 to-pink-500 text-white';
     // case 'Marketing Head': return 'bg-gradient-to-r from-green-400 to-emerald-500 text-white';
@@ -73,7 +199,7 @@ const getRoleColor = (role) => {
     // case 'Social Media Head': return 'bg-gradient-to-r from-violet-400 to-purple-500 text-white';
     // case 'Publicity Head': return 'bg-gradient-to-r from-amber-400 to-yellow-500 text-gray-900';
     // case 'Treasurer': return 'bg-gradient-to-r from-emerald-400 to-green-500 text-white';
-    default: return 'bg-gradient-to-r from-gray-400 to-gray-500 text-white';
+    default: return 'text-gray-900';
   }
 };
 
@@ -105,36 +231,37 @@ const BoardMemberCard = ({ member, onMemberClick }) => {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
-      {/* Card Container */}
+      {/* bg-gradient-to-br from-[#93DA97] to-[#3E5F44] -> text-gray-900 */}
+      {/* Card Container  removed - border-2 border-green-400*/}
       <div className="absolute inset-0 transition-all duration-500 transform group-hover:scale-105">
         {/* Front of the card (always visible) */}
-        <div className="absolute inset-0 bg-gray-900 shadow-xl border-2 border-green-400 rounded-xl p-6 flex flex-col items-center justify-center">
-          <div className="w-32 h-32 rounded-full overflow-hidden mb-4 border-2 border-green-400">
+        <div className="absolute inset-0 bg-gray-900 shadow-xl rounded-xl p-6 flex flex-col items-center justify-center">
+          <div className="w-38 h-38 rounded-full overflow-hidden mb-4">
             <img 
               src={member.image} 
               alt={member.name}
               className="w-full h-full object-cover"
             />
           </div>
-          <h3 className="text-xl font-bold text-white mb-2 text-center">{member.name}</h3>
-          <div className={`px-3 py-1 rounded-full text-xs font-semibold ${getRoleColor(member.title)}`}>
-            {getRoleIcon(member.title)} {member.title}
+          <h3 className="group-hover:hidden text-xl font-bold text-white mb-2 text-center">{member.name}</h3>
+          <div className={`group-hover:hidden px-3 py-1 rounded-full text-xs font-semibold ${getRoleColor(member.title)}`}>
+           {member.title}
           </div>
         </div>
         
         {/* Back of the card (appears on hover) */}
-        <div className={`absolute inset-0 bg-gradient-to-br from-green-500 to-cyan-500 text-white shadow-xl rounded-xl p-6 flex flex-col justify-center items-center transition-opacity duration-500 ${
+        <div className={`absolute inset-0 bg-gradient-to-br from-[#93DA97] to-[E8FFD7] text-gray-900 shadow-xl rounded-xl p-6 flex flex-col justify-center items-center transition-opacity duration-500 ${
           isHovered ? 'opacity-100' : 'opacity-0'
         }`}>
           <h3 className="text-xl font-bold mb-2 text-center">{member.name}</h3>
           <div className={`px-3 py-1 rounded-full text-xs font-semibold mb-4 ${getRoleColor(member.title)}`}>
-            {getRoleIcon(member.title)} {member.title}
+            {member.title}
           </div>
           
-          <p className="text-sm mb-6 text-center line-clamp-3">{member.bio}</p>
+          <p className="text-sm mb-6 text-center line-clamp-3 font-semibold">{member.bio}</p>
           
           <div className="social-icons flex space-x-4 mb-6">
-            <a 
+            {/* <a 
               href={member.social.github} 
               target="_blank"
               rel="noopener noreferrer"
@@ -142,7 +269,7 @@ const BoardMemberCard = ({ member, onMemberClick }) => {
               onClick={(e) => e.stopPropagation()}
             >
               <i className="fab fa-github"></i>
-            </a>
+            </a> */}
             <a 
               href={member.social.linkedin} 
               target="_blank"
@@ -154,7 +281,7 @@ const BoardMemberCard = ({ member, onMemberClick }) => {
             </a>
           </div>
 
-          <button 
+          {/* <button 
             onClick={(e) => {
               e.stopPropagation();
               onMemberClick(member);
@@ -162,7 +289,7 @@ const BoardMemberCard = ({ member, onMemberClick }) => {
             className="bg-gray-900 text-green-400 hover:bg-green-400 hover:text-gray-900 px-4 py-2 rounded-lg text-sm font-medium transition-colors"
           >
             View Profile
-          </button>
+          </button> */}
         </div>
       </div>
     </div>
