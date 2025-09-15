@@ -1,4 +1,5 @@
 import React from 'react';
+import cscLogo from '../assets/team/csc-logo.jpg';
 
 const Footer = () => {
   return (
@@ -9,14 +10,12 @@ const Footer = () => {
           {/* Club Info */}
           <div className="col-span-1 md:col-span-2">
             <div className="flex items-center space-x-3 mb-4">
-              <div className="flex items-center justify-center w-10 h-10 bg-gradient-to-r from-green-400 to-cyan-400 rounded-lg">
-                <svg className="w-6 h-6 text-gray-900" fill="currentColor" viewBox="0 0 24 24">
-                  <path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11V12z"/>
-                </svg>
+              <div className="flex items-center justify-center w-12 h-12">
+                <img src={cscLogo} alt="CSC Logo" className="w-10 h-10 object-contain" />
               </div>
               <div>
-                <h3 className="text-xl font-bold text-white">Nirma Security Club</h3>
-                <p className="text-sm text-gray-400">Protecting Tomorrow's Digital World</p>
+                <h3 className="text-xl font-bold text-white">CSC</h3>
+                <p className="text-sm text-gray-400">Cyber Security Club</p>
               </div>
             </div>
             <p className="text-gray-400 text-sm leading-relaxed max-w-md">
@@ -46,13 +45,13 @@ const Footer = () => {
                   <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
                 </svg>
-                <span className="text-gray-400 text-sm">nsc@nirmauni.ac.in</span>
+                <span className="text-gray-400 text-sm">csc@cybersecurityclub.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <svg className="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
                   <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/>
                 </svg>
-                <span className="text-gray-400 text-sm">Nirma University, Ahmedabad</span>
+                <span className="text-gray-400 text-sm">Cyber Security Club</span>
               </div>
               
               {/* Social Icons */}
@@ -85,7 +84,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © 2025 Nirma Security Club. All rights reserved.
+            © 2025 CSC (Cyber Security Club). All rights reserved.
           </p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#privacy" className="text-gray-400 hover:text-green-400 text-sm transition-colors duration-200">Privacy Policy</a>

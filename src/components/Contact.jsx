@@ -52,8 +52,8 @@ const Contact = () => {
       ),
       title: "Email Us",
       description: "General inquiries and information",
-      contact: "contact@nirmasecurityclub.com",
-      link: "mailto:contact@nirmasecurityclub.com"
+      contact: "contact@cybersecurityclub.com",
+      link: "mailto:contact@cybersecurityclub.com"
     },
     {
       icon: (
@@ -74,8 +74,8 @@ const Contact = () => {
       ),
       title: "Visit Us",
       description: "Our office location",
-      contact: "IT Building, Room 305, Nirma University",
-      link: "https://maps.google.com/?q=Nirma+University+Ahmedabad"
+      contact: "CSC Headquarters",
+      link: "https://maps.google.com/?q=CSC+Cyber+Security+Club"
     },
     {
       icon: (
@@ -85,8 +85,8 @@ const Contact = () => {
       ),
       title: "Follow Us",
       description: "Stay connected on social media",
-      contact: "@NirmaSecurityClub",
-      link: "https://twitter.com/nirmasecurityclub"
+      contact: "@CSC_CyberSecurity",
+      link: "https://twitter.com/csc_cybersecurity"
     }
   ];
 
@@ -98,7 +98,7 @@ const Contact = () => {
 
   const faqData = [
     {
-      question: "How can I join the Nirma Security Club?",
+      question: "How can I join CSC (Cyber Security Club)?",
       answer: "You can join by filling out our membership form during recruitment drives or contacting us directly. We welcome students from all departments who are interested in cybersecurity."
     },
     {
@@ -290,13 +290,13 @@ const Contact = () => {
                     <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/>
                   </svg>
                   <div>
-                    <p className="text-white font-medium">Nirma University</p>
-                    <p className="text-gray-400 text-sm">Sarkhej-Gandhinagar Highway</p>
-                    <p className="text-gray-400 text-sm">Ahmedabad, Gujarat 382481</p>
+                    <p className="text-white font-medium">CSC Headquarters</p>
+                    <p className="text-gray-400 text-sm">Cyber Security Club</p>
+                    <p className="text-gray-400 text-sm">Protecting Tomorrow's Digital World</p>
                   </div>
                 </div>
                 <a
-                  href="https://maps.google.com/?q=Nirma+University+Ahmedabad"
+                  href="https://maps.google.com/?q=CSC+Cyber+Security+Club"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all duration-200"
@@ -313,7 +313,7 @@ const Contact = () => {
                 <a href="#about" className="block text-gray-300 hover:text-green-400 text-sm transition-colors duration-200">About the Club</a>
                 <a href="#events" className="block text-gray-300 hover:text-green-400 text-sm transition-colors duration-200">Upcoming Events</a>
                 <a href="#team" className="block text-gray-300 hover:text-green-400 text-sm transition-colors duration-200">Meet Our Team</a>
-                <a href="mailto:contact@nirmasecurityclub.com" className="block text-gray-300 hover:text-green-400 text-sm transition-colors duration-200">Join Newsletter</a>
+                <a href="mailto:contact@cybersecurityclub.com" className="block text-gray-300 hover:text-green-400 text-sm transition-colors duration-200">Join Newsletter</a>
               </div>
             </div>
           </div>
@@ -339,7 +339,7 @@ const Contact = () => {
           <h3 className="text-2xl font-bold text-white mb-4">Ready to Join Our Community?</h3>
           <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
             Take the first step towards becoming a cybersecurity professional. 
-            Join the Nirma Security Club and be part of something amazing!
+            Join CSC (Cyber Security Club) and be part of something amazing!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-green-500/25">

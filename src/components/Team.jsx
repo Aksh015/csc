@@ -34,7 +34,7 @@ const boardMembers = [
     name: "Ketan Dav",
     title: "Vice President",
     image: VicePresident,
-    bio: "Leading the club with a vision to make Nirma University a cybersecurity hub.",
+    bio: "Leading the club with a vision to make CSC the premier cybersecurity community.",
     social: {
       // github: "https://github.com",
       linkedin: "https://www.linkedin.com/in/ketandav/"
@@ -394,14 +394,14 @@ const Team = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-950 text-white py-12">
+    <div id="team" className="min-h-screen bg-gray-950 text-white py-12">
       <div className="max-w-7xl mx-auto px-4">
         <header className="text-center mb-16">
           <h1 className="text-5xl font-bold bg-gradient-to-r from-green-400 via-cyan-400 to-green-400 bg-clip-text text-transparent mb-4">
             Our Team
           </h1>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            Meet the talented individuals behind Nirma Security Club
+            Meet the talented individuals behind CSC (Cyber Security Club)
           </p>
         </header>
         
@@ -417,7 +417,7 @@ const Team = () => {
         </div>
         
         <footer className="text-center mt-16 text-gray-400">
-          <p>Nirma Security Club - Protecting Tomorrow's Digital World</p>
+          <p>CSC (Cyber Security Club) - Protecting Tomorrow's Digital World</p>
         </footer>
 
         <MemberModal member={selectedMember} onClose={closeModal} />

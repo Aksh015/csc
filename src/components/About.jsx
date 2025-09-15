@@ -8,11 +8,11 @@ const About = () => {
         {/* Section Header */}
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            About <span className="bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">Nirma Security Club</span>
+            About <span className="bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">CSC</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
             Building tomorrow's cybersecurity professionals through hands-on learning, 
-            innovation, and community collaboration at Nirma University.
+            innovation, and community collaboration in the Cyber Security Club.
           </p>
         </div>
 
@@ -47,8 +47,8 @@ const About = () => {
             </div>
             <p className="text-gray-300 leading-relaxed">
               To be a leading cybersecurity community that bridges the gap between academic learning 
-              and industry requirements, creating a safe and secure digital ecosystem for Nirma University 
-              and beyond through innovation and collaboration.
+              and industry requirements, creating a safe and secure digital ecosystem through 
+              innovation and collaboration.
             </p>
           </div>
         </div>
