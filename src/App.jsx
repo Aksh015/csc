@@ -67,11 +67,11 @@ function App() {
                 <span className="inline-block">C</span>
                 <span className="inline-block">S</span>
                 <span className="inline-block">C</span>
-                <span className="text-transparent bg-gradient-to-r from-green-400 to-green-500 bg-clip-text block mt-2">
+                <span className="text-transparent bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text block mt-2">
                   (Cyber Security Club)
                 </span>
                 </h1>
-              <p className="text-lg md:text-xl text-gray-300 leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-400 leading-relaxed">
                 Join the forefront of cybersecurity education and innovation. 
                 Learn, practice, and compete with the best in the field.
               </p>
