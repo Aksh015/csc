@@ -4,6 +4,7 @@ import { AuthProvider } from './contexts/AuthContext'
 import Navbar from './components/Navbar'
 import Home from './components/Home'
 import Login from './components/Login'
+import AuthTest from './components/AuthTest'
 import CustomCursor from './components/CustomCursor'
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/login" element={<Login />} />
+            <Route path="/test-auth" element={<AuthTest />} />
           </Routes>
         </div>
       </Router>

@@ -23,9 +23,10 @@ export const auth = getAuth(app);
 
 // Initialize Google Auth Provider
 export const googleProvider = new GoogleAuthProvider();
-// Set custom parameters to specify the domain
+// Set custom parameters - remove hd for testing, add it back later if needed
 googleProvider.setCustomParameters({
-  hd: 'nirmauni.ac.in' // Hosted domain parameter to restrict to Nirma University emails
+  // hd: 'nirmauni.ac.in', // Commented out for testing - uncomment after testing
+  prompt: 'select_account'
 });
 
 // Initialize Cloud Firestore and get a reference to the service
