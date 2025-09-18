@@ -229,17 +229,61 @@ section[id], div[id] {
   50% { transform: scale(1.1); }
 }
 
-/* Advanced Right Side Animations */
+/* Elegant Professional Animation */
+@keyframes breathe {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.7;
+  }
+  50% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
 
-/* Binary Rain Effect */
-@keyframes binaryFall1 { 0% { transform: translateY(-100%); } 100% { transform: translateY(100vh); } }
-@keyframes binaryFall2 { 0% { transform: translateY(-100%); } 100% { transform: translateY(100vh); } }
-@keyframes binaryFall3 { 0% { transform: translateY(-100%); } 100% { transform: translateY(100vh); } }
-@keyframes binaryFall4 { 0% { transform: translateY(-100%); } 100% { transform: translateY(100vh); } }
-@keyframes binaryFall5 { 0% { transform: translateY(-100%); } 100% { transform: translateY(100vh); } }
-@keyframes binaryFall6 { 0% { transform: translateY(-100%); } 100% { transform: translateY(100vh); } }
-@keyframes binaryFall7 { 0% { transform: translateY(-100%); } 100% { transform: translateY(100vh); } }
-@keyframes binaryFall8 { 0% { transform: translateY(-100%); } 100% { transform: translateY(100vh); } }
+@keyframes slow-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(34, 197, 94, 0.6);
+  }
+}
+
+@keyframes fade-in-out {
+  0%, 100% {
+    opacity: 0.4;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+/* Animation Classes */
+.elegant-breathe {
+  animation: breathe 4s ease-in-out infinite;
+}
+
+.subtle-spin {
+  animation: slow-spin 30s linear infinite;
+}
+
+.soft-glow {
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+.gentle-fade {
+  animation: fade-in-out 5s ease-in-out infinite;
+}
 
 /* Radar and Scanning Effects */
 @keyframes radarScan {
@@ -519,4 +563,262 @@ section[id], div[id] {
 
 .animate-lock-secure {
   animation: lockSecure 3s ease-in-out infinite;
+}
+
+/* Clean & Sophisticated Animation Keyframes */
+@keyframes elegant-breathe {
+  0%, 100% { 
+    transform: scale(1); 
+    opacity: 0.9; 
+  }
+  50% { 
+    transform: scale(1.02); 
+    opacity: 1; 
+  }
+}
+
+@keyframes subtle-spin {
+  from { 
+    transform: rotate(0deg); 
+  }
+  to { 
+    transform: rotate(360deg); 
+  }
+}
+
+@keyframes gentle-fade {
+  0%, 100% { 
+    opacity: 0.3; 
+  }
+  50% { 
+    opacity: 0.8; 
+  }
+}
+
+@keyframes soft-glow {
+  0%, 100% { 
+    box-shadow: 0 0 20px rgba(34, 197, 94, 0.1); 
+  }
+  50% { 
+    box-shadow: 0 0 30px rgba(34, 197, 94, 0.2); 
+  }
+}
+
+/* Dynamic Cybersecurity Animations */
+@keyframes security-scan {
+  0% { 
+    transform: rotate(0deg) scale(1);
+    border-color: rgba(34, 197, 94, 0.3);
+  }
+  25% { 
+    border-color: rgba(34, 197, 94, 0.6);
+  }
+  50% { 
+    transform: rotate(180deg) scale(1.05);
+    border-color: rgba(34, 197, 94, 0.8);
+  }
+  75% { 
+    border-color: rgba(34, 197, 94, 0.6);
+  }
+  100% { 
+    transform: rotate(360deg) scale(1);
+    border-color: rgba(34, 197, 94, 0.3);
+  }
+}
+
+@keyframes defense-rotate {
+  0% { 
+    transform: rotate(0deg);
+  }
+  100% { 
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes cyber-pulse {
+  0%, 100% { 
+    box-shadow: 0 0 30px rgba(34, 197, 94, 0.3);
+    transform: scale(1);
+  }
+  50% { 
+    box-shadow: 0 0 50px rgba(34, 197, 94, 0.6);
+    transform: scale(1.03);
+  }
+}
+
+@keyframes icon-glow {
+  0%, 100% { 
+    box-shadow: 0 0 25px rgba(34, 197, 94, 0.4);
+  }
+  50% { 
+    box-shadow: 0 0 40px rgba(34, 197, 94, 0.8);
+  }
+}
+
+@keyframes security-orbit {
+  0%, 100% { 
+    opacity: 0.6;
+    transform: scale(1);
+    box-shadow: 0 0 10px rgba(34, 197, 94, 0.6);
+  }
+  50% { 
+    opacity: 1;
+    transform: scale(1.2);
+    box-shadow: 0 0 20px rgba(34, 197, 94, 1);
+  }
+}
+
+@keyframes float-secure {
+  0%, 100% { 
+    transform: translateY(0px) rotate(0deg);
+  }
+  25% { 
+    transform: translateY(-8px) rotate(2deg);
+  }
+  50% { 
+    transform: translateY(-15px) rotate(0deg);
+  }
+  75% { 
+    transform: translateY(-8px) rotate(-2deg);
+  }
+}
+
+@keyframes radar-sweep {
+  0% { 
+    transform: rotate(0deg);
+    opacity: 0;
+  }
+  10% { 
+    opacity: 1;
+  }
+  90% { 
+    opacity: 1;
+  }
+  100% { 
+    transform: rotate(360deg);
+    opacity: 0;
+  }
+}
+
+@keyframes status-panel {
+  0%, 100% { 
+    opacity: 0.9;
+    transform: translateY(0px);
+  }
+  50% { 
+    opacity: 1;
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes data-stream {
+  0% { 
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  50% { 
+    opacity: 1;
+  }
+  100% { 
+    opacity: 0;
+    transform: translateX(100%);
+  }
+}
+
+/* Refined Animation Classes */
+.elegant-breathe {
+  animation: elegant-breathe 4s ease-in-out infinite;
+}
+
+.subtle-spin {
+  animation: subtle-spin 20s linear infinite;
+}
+
+.gentle-fade {
+  animation: gentle-fade 5s ease-in-out infinite;
+}
+
+.soft-glow {
+  animation: soft-glow 3s ease-in-out infinite;
+}
+
+/* Dynamic Cybersecurity Classes */
+.security-scan {
+  animation: security-scan 6s ease-in-out infinite;
+}
+
+.defense-rotate {
+  animation: defense-rotate 15s linear infinite;
+}
+
+.cyber-pulse {
+  animation: cyber-pulse 3s ease-in-out infinite;
+}
+
+.icon-glow {
+  animation: icon-glow 2.5s ease-in-out infinite;
+}
+
+.security-orbit {
+  animation: security-orbit 4s ease-in-out infinite;
+}
+
+.float-secure {
+  animation: float-secure 6s ease-in-out infinite;
+}
+
+.status-panel {
+  animation: status-panel 4s ease-in-out infinite;
+}
+
+/* Cyber Grid Background */
+.cyber-grid {
+  background-image: 
+    linear-gradient(rgba(34, 197, 94, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(34, 197, 94, 0.1) 1px, transparent 1px);
+  background-size: 30px 30px;
+  animation: subtle-spin 40s linear infinite;
+}
+
+/* Radar Sweep Effect */
+.radar-sweep {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  height: 50%;
+  background: linear-gradient(to bottom, rgba(34, 197, 94, 0), rgba(34, 197, 94, 0.8));
+  transform-origin: bottom;
+  animation: radar-sweep 4s linear infinite;
+}
+
+/* Data Stream Lines */
+.data-stream-1,
+.data-stream-2,
+.data-stream-3 {
+  position: absolute;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, rgba(34, 197, 94, 0.6), transparent);
+  animation: data-stream 3s linear infinite;
+}
+
+.data-stream-1 {
+  top: 20%;
+  left: 0;
+  right: 0;
+  animation-delay: 0s;
+}
+
+.data-stream-2 {
+  top: 60%;
+  left: 0;
+  right: 0;
+  animation-delay: -1s;
+}
+
+.data-stream-3 {
+  top: 80%;
+  left: 0;
+  right: 0;
+  animation-delay: -2s;
 }

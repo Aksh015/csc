@@ -20,7 +20,7 @@ const Footer = () => {
             </div>
             <p className="text-gray-400 text-sm leading-relaxed max-w-md">
               Empowering students with cybersecurity knowledge through hands-on workshops, 
-              competitions, and real-world training. Join us in building a safer digital future.
+              competitions, and real-world training. Building a safer digital future.
             </p>
           </div>
 

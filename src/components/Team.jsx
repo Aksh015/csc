@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import President from "../assets/team/P.jpg";
-import VicePresident from "../assets/team/ViceP.jpg";
+import VicePresident from "../assets/team/vp.jpg";
 import GS1 from "../assets/team/GS1.jpg";
 import GS2 from "../assets/team/GS2.jpg";
 import MD1 from "../assets/team/MD1.jpg";

@@ -1,8 +1,42 @@
 import React from 'react';
-import cscLogo from '../assets/team/csc-logo.jpg';
+import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
+import cscLogo from '../assets/team/csc-logo.png';
 
 
 const Navbar = () => {
+  const { currentUser, logout } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+
+  const handleLogout = async () => {
+    try {
+      await logout();
+      navigate('/');
+    } catch (error) {
+      console.error('Failed to log out');
+    }
+  };
+
+  const handleNavClick = (sectionId) => {
+    if (location.pathname !== '/') {
+      // If not on home page, navigate to home first, then scroll
+      navigate('/');
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      }, 100);
+    } else {
+      // If already on home page, just scroll to section
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  };
+
   return (
     <nav className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 border-b border-green-500/20 sticky top-0 z-50 backdrop-blur-md bg-opacity-95 shadow-lg shadow-green-500/10">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
@@ -20,28 +54,60 @@ const Navbar = () => {
 
           {/* Navigation Links */}
           <div className="hidden md:flex space-x-10">
-            <a href="#home" className="cursor-hover text-gray-200 hover:text-green-400 hover:bg-green-500/10 px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 border-transparent hover:border-green-400">
+            <button 
+              onClick={() => handleNavClick('home')}
+              className="cursor-hover text-gray-200 hover:text-green-400 hover:bg-green-500/10 px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 border-transparent hover:border-green-400"
+            >
               Home
-            </a>
-            <a href="#about" className="cursor-hover text-gray-200 hover:text-green-400 hover:bg-green-500/10 px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 border-transparent hover:border-green-400">
+            </button>
+            <button 
+              onClick={() => handleNavClick('about')}
+              className="cursor-hover text-gray-200 hover:text-green-400 hover:bg-green-500/10 px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 border-transparent hover:border-green-400"
+            >
               About
-            </a>
-            <a href="#events" className="cursor-hover text-gray-200 hover:text-green-400 hover:bg-green-500/10 px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 border-transparent hover:border-green-400">
+            </button>
+            <button 
+              onClick={() => handleNavClick('events')}
+              className="cursor-hover text-gray-200 hover:text-green-400 hover:bg-green-500/10 px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 border-transparent hover:border-green-400"
+            >
               Events
-            </a>
-            <a href="#team" className="cursor-hover text-gray-200 hover:text-green-400 hover:bg-green-500/10 px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 border-transparent hover:border-green-400">
+            </button>
+            <button 
+              onClick={() => handleNavClick('team')}
+              className="cursor-hover text-gray-200 hover:text-green-400 hover:bg-green-500/10 px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 border-transparent hover:border-green-400"
+            >
               Team
-            </a>
-            <a href="#contact" className="cursor-hover text-gray-200 hover:text-green-400 hover:bg-green-500/10 px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 border-transparent hover:border-green-400">
+            </button>
+            <button 
+              onClick={() => handleNavClick('contact')}
+              className="cursor-hover text-gray-200 hover:text-green-400 hover:bg-green-500/10 px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 border-transparent hover:border-green-400"
+            >
               Contact
-            </a>
+            </button>
           </div>
 
-          {/* Join Button */}
-          <div className="hidden md:flex">
-            <button className="cursor-hover bg-gradient-to-r from-green-600/70 to-cyan-600/70 hover:from-green-500 hover:to-cyan-500 text-white px-6 py-3 rounded-lg text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-green-500/30 border border-green-500/30 hover:border-green-400">
-              Join Club
-            </button>
+          {/* Authentication Buttons */}
+          <div className="hidden md:flex space-x-4">
+            {currentUser ? (
+              <div className="flex items-center space-x-4">
+                <span className="text-gray-300">
+                  Welcome, {currentUser.email.split('@')[0]}
+                </span>
+                <button 
+                  onClick={handleLogout}
+                  className="cursor-hover bg-red-600/70 hover:bg-red-500 text-white px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 shadow-lg hover:shadow-red-500/30 border border-red-500/30 hover:border-red-400"
+                >
+                  Logout
+                </button>
+              </div>
+            ) : (
+              <Link 
+                to="/login"
+                className="cursor-hover bg-gradient-to-r from-green-600/70 to-cyan-600/70 hover:from-green-500 hover:to-cyan-500 text-white px-6 py-2 rounded-lg text-sm font-semibold transition-all duration-300 shadow-lg hover:shadow-green-500/30 border border-green-500/30 hover:border-green-400"
+              >
+                Login
+              </Link>
+            )}
           </div>
 
           {/* Mobile menu button */}

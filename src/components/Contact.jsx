@@ -98,11 +98,11 @@ const Contact = () => {
 
   const faqData = [
     {
-      question: "How can I join CSC (Cyber Security Club)?",
-      answer: "You can join by filling out our membership form during recruitment drives or contacting us directly. We welcome students from all departments who are interested in cybersecurity."
+      question: "How can I learn more about CSC (Cyber Security Club)?",
+      answer: "You can contact us directly through email or visit us during office hours. We provide information about our activities and how students can participate in cybersecurity events."
     },
     {
-      question: "Are there any prerequisites to join?",
+      question: "Are there any prerequisites to participate?",
       answer: "No specific prerequisites required! We welcome beginners and provide training from basics to advanced levels. Enthusiasm to learn cybersecurity is all you need."
     },
     {
@@ -125,7 +125,7 @@ const Contact = () => {
             Get in <span className="bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">Touch</span>
           </h2>
           <p className="text-xl text-gray-400 max-w-3xl mx-auto leading-relaxed">
-            Have questions about cybersecurity or want to join our community? 
+            Have questions about cybersecurity or want to learn more about our community? 
             We're here to help and guide you on your cybersecurity journey.
           </p>
         </div>
@@ -336,17 +336,23 @@ const Contact = () => {
 
         {/* Call to Action */}
         <div className="mt-16 text-center bg-gradient-to-r from-green-900/20 to-cyan-900/20 rounded-xl p-8 border border-green-500/20">
-          <h3 className="text-2xl font-bold text-white mb-4">Ready to Join Our Community?</h3>
+          <h3 className="text-2xl font-bold text-white mb-4">Ready to Connect?</h3>
           <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
-            Take the first step towards becoming a cybersecurity professional. 
-            Join CSC (Cyber Security Club) and be part of something amazing!
+            Take the first step towards exploring cybersecurity opportunities. 
+            Connect with CSC (Cyber Security Club) and learn more about our activities!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-green-500/25">
-              Join the Club
+            <button 
+              onClick={() => window.open('mailto:contact@cybersecurityclub.com', '_blank')}
+              className="bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-green-500/25"
+            >
+              Send Email
             </button>
-            <button className="border border-gray-600 hover:border-green-400 text-gray-300 hover:text-green-400 px-8 py-3 rounded-lg font-medium transition-all duration-200">
-              Download Brochure
+            <button 
+              onClick={() => document.getElementById('events').scrollIntoView({ behavior: 'smooth' })}
+              className="border border-gray-600 hover:border-green-400 text-gray-300 hover:text-green-400 px-8 py-3 rounded-lg font-medium transition-all duration-200"
+            >
+              View Events
             </button>
           </div>
         </div>

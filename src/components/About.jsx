@@ -133,15 +133,21 @@ const About = () => {
         <div className="text-center mt-16">
           <h3 className="text-2xl font-bold text-white mb-6">Ready to Secure the Future?</h3>
           <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
-            Join our community of cybersecurity enthusiasts and start your journey 
-            towards becoming a cybersecurity professional.
+            Connect with our community of cybersecurity enthusiasts and explore opportunities 
+            in the cybersecurity profession.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button className="bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-white px-8 py-3 rounded-lg text-lg font-medium transition-all duration-200 shadow-lg hover:shadow-green-500/25">
-              Join Our Club
-            </button>
-            <button className="border border-gray-600 hover:border-green-400 text-gray-300 hover:text-green-400 px-8 py-3 rounded-lg text-lg font-medium transition-all duration-200">
+            <button 
+              onClick={() => document.getElementById('contact').scrollIntoView({ behavior: 'smooth' })}
+              className="bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-white px-8 py-3 rounded-lg text-lg font-medium transition-all duration-200 shadow-lg hover:shadow-green-500/25"
+            >
               Contact Us
+            </button>
+            <button 
+              onClick={() => document.getElementById('events').scrollIntoView({ behavior: 'smooth' })}
+              className="border border-gray-600 hover:border-green-400 text-gray-300 hover:text-green-400 px-8 py-3 rounded-lg text-lg font-medium transition-all duration-200"
+            >
+              View Events
             </button>
           </div>
         </div>
