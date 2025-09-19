@@ -112,7 +112,7 @@ const Home = () => {
               </div>
               
               {/* Dynamic Status Panel */}
-              <div className="absolute top-8 right-8 bg-gray-900/80 backdrop-blur-sm border border-green-400/30 rounded-lg p-3 status-panel">
+              {/* <div className="absolute top-8 right-8 bg-gray-900/80 backdrop-blur-sm border border-green-400/30 rounded-lg p-3 status-panel">
                 <div className="flex items-center space-x-2 mb-1">
                   <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
                   <span className="text-green-400 text-xs font-mono">SECURE</span>
@@ -121,7 +121,7 @@ const Home = () => {
                   <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" style={{animationDelay: '-0.5s'}}></div>
                   <span className="text-blue-400 text-xs font-mono">ACTIVE</span>
                 </div>
-              </div>
+              </div> */}
               
               {/* Data Stream Lines */}
               <div className="absolute inset-0 pointer-events-none">

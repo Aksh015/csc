@@ -296,7 +296,7 @@ const Events = () => {
         )}
 
         {/* Event Categories */}
-        <div className="mt-20">
+        {/* <div className="mt-20">
           <h3 className="text-3xl font-bold text-white text-center mb-12">Event Categories</h3>
           <div className="grid md:grid-cols-4 gap-6">
             
@@ -332,7 +332,7 @@ const Events = () => {
               <p className="text-gray-400 text-sm">Industry certification prep</p>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Newsletter Signup */}
         <div className="mt-20 bg-gray-800 rounded-xl p-8 border border-gray-700 text-center">
