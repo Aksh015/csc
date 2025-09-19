@@ -251,7 +251,7 @@ const BoardMemberCard = ({ member, onMemberClick }) => {
         </div>
         
         {/* Back of the card (appears on hover) */}
-        <div className={`absolute inset-0 bg-gradient-to-br from-[#93DA97] to-[E8FFD7] text-gray-900 shadow-xl rounded-xl p-6 flex flex-col justify-center items-center transition-opacity duration-500 ${
+        <div className={`absolute inset-0 bg-gradient-to-br from-green-600/50 to-cyan-600/50 text-gray-900 shadow-xl rounded-xl p-6 flex flex-col justify-center items-center transition-opacity duration-500 ${
           isHovered ? 'opacity-100' : 'opacity-0'
         }`}>
           <h3 className="text-xl font-bold mb-2 text-center">{member.name}</h3>
