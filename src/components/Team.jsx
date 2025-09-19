@@ -237,7 +237,7 @@ const BoardMemberCard = ({ member, onMemberClick }) => {
       <div className="absolute inset-0 transition-all duration-500 transform group-hover:scale-105">
         {/* Front of the card (always visible) */}
         <div className="absolute inset-0 bg-gray-900 shadow-xl rounded-xl p-6 flex flex-col items-center justify-center">
-          <div className="w-38 h-38 rounded-full overflow-hidden mb-4">
+          <div className="group-hover:hidden w-38 h-38 rounded-full overflow-hidden mb-4">
             <img 
               src={member.image} 
               alt={member.name}
@@ -254,23 +254,18 @@ const BoardMemberCard = ({ member, onMemberClick }) => {
         <div className={`absolute inset-0 bg-gradient-to-br from-[#93DA97] to-[E8FFD7] text-gray-900 shadow-xl rounded-xl p-6 flex flex-col justify-center items-center transition-opacity duration-500 ${
           isHovered ? 'opacity-100' : 'opacity-0'
         }`}>
-          <h3 className="text-xl font-bold mb-2 text-center">{member.name}</h3>
-          <div className={`px-3 py-1 rounded-full text-xs font-semibold mb-4 ${getRoleColor(member.title)}`}>
-            {member.title}
+          {/* Profile Image */}
+          <div className="w-32 h-32 rounded-full overflow-hidden mb-3">
+            <img 
+              src={member.image} 
+              alt={member.name}
+              className="w-full h-full object-cover"
+            />
           </div>
           
-          <p className="text-sm mb-6 text-center line-clamp-3 font-semibold">{member.bio}</p>
+          <h3 className="text-lg font-bold mb-3 text-center">{member.name}</h3>
           
-          <div className="social-icons flex space-x-4 mb-6">
-            {/* <a 
-              href={member.social.github} 
-              target="_blank"
-              rel="noopener noreferrer"
-              className="bg-gray-900 text-green-400 w-10 h-10 rounded-full flex items-center justify-center hover:bg-green-400 hover:text-gray-900 transition-colors"
-              onClick={(e) => e.stopPropagation()}
-            >
-              <i className="fab fa-github"></i>
-            </a> */}
+          <div className="social-icons flex space-x-4 mb-3">
             <a 
               href={member.social.linkedin} 
               target="_blank"
@@ -281,16 +276,11 @@ const BoardMemberCard = ({ member, onMemberClick }) => {
               <i className="fab fa-linkedin-in"></i>
             </a>
           </div>
-
-          {/* <button 
-            onClick={(e) => {
-              e.stopPropagation();
-              onMemberClick(member);
-            }}
-            className="bg-gray-900 text-green-400 hover:bg-green-400 hover:text-gray-900 px-4 py-2 rounded-lg text-sm font-medium transition-colors"
-          >
-            View Profile
-          </button> */}
+          
+          {/* Highlighted Position */}
+          <div className="bg-gray-900 text-green-400 px-3 py-1 rounded-lg text-sm font-bold shadow-lg border border-green-400">
+            {member.title}
+          </div>
         </div>
       </div>
     </div>
