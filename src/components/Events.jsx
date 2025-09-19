@@ -229,7 +229,7 @@ const Events = () => {
                   </div>
 
                   {/* Call to Action */}
-                  <div className="bg-gradient-to-r from-green-900/20 to-cyan-900/20 rounded-xl p-8 border border-green-500/20">
+                  {/* <div className="bg-gradient-to-r from-green-900/20 to-cyan-900/20 rounded-xl p-8 border border-green-500/20">
                     <h4 className="text-2xl font-bold text-white mb-4">Be the First to Know!</h4>
                     <p className="text-gray-300 mb-6">
                       Subscribe to our newsletter and follow our social media to get instant notifications 
@@ -244,17 +244,17 @@ const Events = () => {
                         Follow Us on Social Media
                       </button>
                     </div>
-                  </div>
+                  </div> */}
 
                   {/* Timeline Hint */}
-                  <div className="mt-12 flex items-center justify-center gap-4 text-gray-400">
+                  {/* <div className="mt-12 flex items-center justify-center gap-4 text-gray-400">
                     <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 13h2v6h-2v-6zm0-10h2v8h-2V5z"/>
                     </svg>
                     <span className="text-sm">
                       Check back in early October for our exciting lineup of events!
                     </span>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             )}
@@ -335,7 +335,7 @@ const Events = () => {
         </div>
 
         {/* Newsletter Signup */}
-        <div className="mt-20 bg-gray-800 rounded-xl p-8 border border-gray-700 text-center">
+        {/* <div className="mt-20 bg-gray-800 rounded-xl p-8 border border-gray-700 text-center">
           <h3 className="text-2xl font-bold text-white mb-4">Stay Updated</h3>
           <p className="text-gray-400 mb-6 max-w-2xl mx-auto">
             Subscribe to our newsletter to get notified about upcoming events, workshops, and competitions.
@@ -350,7 +350,7 @@ const Events = () => {
               Subscribe
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );

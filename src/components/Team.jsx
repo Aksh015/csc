@@ -255,11 +255,11 @@ const BoardMemberCard = ({ member, onMemberClick }) => {
           isHovered ? 'opacity-100' : 'opacity-0'
         }`}>
           <h3 className="text-xl font-bold mb-2 text-center">{member.name}</h3>
-          <div className={`px-3 py-1 rounded-full text-xs font-semibold mb-4 ${getRoleColor(member.title)}`}>
-            {member.title}
+          <div className={`text-xl px-3 py-1 rounded-full text-xs font-bold mb-2 ${getRoleColor(member.title)}`}>
+            <h3>{member.title}</h3>
           </div>
           
-          <p className="text-sm mb-6 text-center line-clamp-3 font-semibold">{member.bio}</p>
+          {/* <p className="text-sm mb-6 text-center line-clamp-3 font-semibold">{member.bio}</p> */}
           
           <div className="social-icons flex space-x-4 mb-6">
             {/* <a 
