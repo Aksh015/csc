@@ -1,8 +1,17 @@
 @import "tailwindcss";
 
 /* Custom Cursor Animations */
-* {
-  cursor: none; /* Hide default cursor */
+*, *::before, *::after {
+  cursor: none !important; /* Hide default cursor */
+}
+
+html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, button, input, textarea, select {
+  cursor: none !important;
+}
+
+/* Override any Tailwind cursor classes */
+.cursor-pointer, .cursor-default, .cursor-move, .cursor-text, .cursor-wait, .cursor-help {
+  cursor: none !important;
 }
 
 .custom-cursor {

@@ -301,8 +301,7 @@ const MemberModal = ({ member, onClose }) => {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="p-6">
-          {/* Close Button */}
-          <button 
+          {/* Close Button */}        <button 
             onClick={onClose}
             className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors duration-200 bg-gray-700 rounded-full p-1"
           >

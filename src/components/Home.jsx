@@ -1,5 +1,5 @@
 import React from 'react';
-import { useAuth } from '../contexts/AuthContext';
+import { Link } from 'react-router-dom';
 import About from './About';
 import Events from './Events';
 import Team from './Team';
@@ -7,8 +7,6 @@ import Contact from './Contact';
 import Footer from './Footer';
 
 const Home = () => {
-  const { currentUser } = useAuth();
-
   return (
     <>
       <section id="home" className="relative px-12 py-16 bg-gray-950 min-h-screen flex items-center">
@@ -22,7 +20,7 @@ const Home = () => {
                   <span className="inline-block">S</span>
                   <span className="inline-block">C</span>
                   <span className="text-transparent bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text block mt-2">
-                    (Cyber Security Club)
+                    Cyber Security Club
                   </span>
                 </h1>
                 <p className="text-lg md:text-xl text-gray-400 leading-relaxed">
@@ -32,23 +30,28 @@ const Home = () => {
               </div>
 
               <div className="flex flex-col sm:flex-row gap-4">
-                {currentUser ? (
-                  <div className="text-green-400 text-lg font-medium">
-                    Welcome back, {currentUser.email.split('@')[0]}! 🎉
-                  </div>
-                ) : (
-                  <button 
-                    onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}
-                    className="cursor-hover group relative bg-transparent hover:bg-green-500/10 text-green-400 hover:text-white px-8 py-4 text-base font-semibold rounded-full transition-all duration-300 border-2 border-green-500/30 hover:border-green-400 hover:scale-105"
-                  >
-                    <span className="relative z-10 flex items-center gap-2">
-                      Learn More
-                      <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                    </span>
-                  </button>
-                )}
+                <button 
+                  onClick={() => document.getElementById('about').scrollIntoView({ behavior: 'smooth' })}
+                  className="cursor-hover group relative bg-transparent hover:bg-green-500/10 text-green-400 hover:text-white px-8 py-4 text-base font-semibold rounded-full transition-all duration-300 border-2 border-green-500/30 hover:border-green-400 hover:scale-105"
+                >
+                  <span className="relative z-10 flex items-center gap-2">
+                    Learn More
+                    <svg className="w-4 h-4 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                    </svg>
+                  </span>
+                </button>
+                <Link 
+                  to="/join-us"
+                  className="cursor-hover group relative bg-gradient-to-r from-green-500/20 to-cyan-500/20 hover:from-green-500 hover:to-cyan-500 text-white px-8 py-4 text-base font-semibold rounded-full transition-all duration-300 border-2 border-green-500/50 hover:border-transparent hover:scale-105"
+                >
+                  <span className="relative z-10 flex items-center gap-2">
+                    Join Our Team
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
+                    </svg>
+                  </span>
+                </Link>
               </div>
             </div>
 
@@ -111,17 +114,6 @@ const Home = () => {
                 <div className="absolute -top-4 left-1/4 w-8 h-8 border border-green-400/40 rounded-full backdrop-blur-sm bg-green-500/10 float-secure" style={{animationDelay: '-3s'}}></div>
               </div>
               
-              {/* Dynamic Status Panel */}
-              {/* <div className="absolute top-8 right-8 bg-gray-900/80 backdrop-blur-sm border border-green-400/30 rounded-lg p-3 status-panel">
-                <div className="flex items-center space-x-2 mb-1">
-                  <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                  <span className="text-green-400 text-xs font-mono">SECURE</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 bg-blue-400 rounded-full animate-pulse" style={{animationDelay: '-0.5s'}}></div>
-                  <span className="text-blue-400 text-xs font-mono">ACTIVE</span>
-                </div>
-              </div> */}
               
               {/* Data Stream Lines */}
               <div className="absolute inset-0 pointer-events-none">
