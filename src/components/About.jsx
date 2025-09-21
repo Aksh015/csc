@@ -103,7 +103,7 @@ const About = () => {
         </div>
 
         {/* Achievements Section */}
-        <div className="bg-gray-800 rounded-xl p-8 border border-gray-700">
+        {/* <div className="bg-gray-800 rounded-xl p-8 border border-gray-700">
           <h3 className="text-3xl font-bold text-white text-center mb-12">Our Achievements</h3>
           <div className="grid md:grid-cols-4 gap-6 text-center">
             
@@ -127,10 +127,10 @@ const About = () => {
               <div className="text-gray-400">Placement Success</div>
             </div>
           </div>
-        </div>
+        </div> */}
 
         {/* Call to Action */}
-        <div className="text-center mt-16">
+        {/* <div className="text-center mt-16">
           <h3 className="text-2xl font-bold text-white mb-6">Ready to Secure the Future?</h3>
           <p className="text-gray-400 mb-8 max-w-2xl mx-auto">
             Connect with our community of cybersecurity enthusiasts and explore opportunities 
@@ -150,7 +150,7 @@ const About = () => {
               View Events
             </button>
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   );
