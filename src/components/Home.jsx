@@ -16,12 +16,12 @@ const Home = () => {
             <div className="space-y-8">
               <div className="space-y-6">
                 <h1 className="text-4xl md:text-6xl xl:text-7xl font-bold text-white leading-tight">
-                  <span className="inline-block">C</span>
-                  <span className="inline-block">S</span>
-                  <span className="inline-block">C</span>
-                  <span className="text-transparent bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text block mt-2">
+                  <span className=" text-transparent bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text block mt-2">
                     Cyber Security Club
                   </span>
+                  <span className="text-2xl md:text-4xl xl:text-5xl inline-block">ITNU</span>
+                  {/* <span className="inline-block">S</span>
+                  <span className="inline-block">C</span> */}
                 </h1>
                 <p className="text-lg md:text-xl text-gray-400 leading-relaxed">
                   Advancing cybersecurity education and innovation through 

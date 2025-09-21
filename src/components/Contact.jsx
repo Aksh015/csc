@@ -43,52 +43,49 @@ const Contact = () => {
     }, 1000);
   };
 
-  const contactMethods = [
-    {
-      icon: (
-        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
-        </svg>
-      ),
-      title: "Email Us",
-      description: "General inquiries and information",
-      contact: "csc.nu@nirmauni.ac.in",
-      link: "mailto:csc.nu@nirmauni.ac.in"
-    },
-    {
-      icon: (
-        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
-        </svg>
-      ),
-      title: "Call Us",
-      description: "For urgent inquiries",
-      contact: "+91 79 6671 5000",
-      link: "tel:+917966715000"
-    },
-    {
-      icon: (
-        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-          <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/>
-        </svg>
-      ),
-      title: "Visit Us",
-      description: "Our office location",
-      contact: "CSC Headquarters",
-      link: "https://maps.google.com/?q=CSC+Cyber+Security+Club"
-    },
-    {
-      icon: (
-        <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-          <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
-        </svg>
-      ),
-      title: "Follow Us",
-      description: "Stay connected on social media",
-      contact: "@CSC_CyberSecurity",
-      link: "https://twitter.com/csc_cybersecurity"
-    }
-  ];
+ const contactMethods = [
+  {
+    icon: (
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+    ),
+    title: "Email Us",
+    description: "General inquiries",
+    contact: "csc.nu@nirmauni.ac.in",
+    link: "mailto:csc.nu@nirmauni.ac.in"
+  },
+  {
+    icon: (
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram-icon lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+    ),
+    title: "Instagram",
+    description: "Follow us on Instagram",
+    contact: "@CSC_CyberSecurity",
+    link: "https://instagram.com/csc_cybersecurity"
+  },
+  {
+    icon: (
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-linkedin-icon lucide-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+
+
+    ),
+    title: "LinkedIn",
+    description: "Connect professionally",
+    contact: "CSC Cyber Security Club",
+    link: "https://linkedin.com/company/csc-cybersecurity"
+  },
+  {
+    icon: (
+<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-messages-square-icon lucide-messages-square"><path d="M16 10a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 14.286V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/><path d="M20 9a2 2 0 0 1 2 2v10.286a.71.71 0 0 1-1.212.502l-2.202-2.202A2 2 0 0 0 17.172 19H10a2 2 0 0 1-2-2v-1"/></svg>
+
+
+    ),
+    title: "WhatsApp",
+    description: "Chat with us",
+    contact: "+91 98765 43210",
+    link: "https://wa.me/919876543210"
+  }
+];
+
 
   const officeHours = [
     { day: "Monday - Friday", time: "9:00 AM - 6:00 PM" },
@@ -183,14 +180,14 @@ const Contact = () => {
               onClick={() => window.open('mailto:contact@cybersecurityclub.com', '_blank')}
               className="bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-green-500/25"
             >
-              Send Email
+              Join now
             </button>
-            <button 
+            {/* <button 
               onClick={() => document.getElementById('events').scrollIntoView({ behavior: 'smooth' })}
               className="border border-gray-600 hover:border-green-400 text-gray-300 hover:text-green-400 px-8 py-3 rounded-lg font-medium transition-all duration-200"
             >
               View Events
-            </button>
+            </button> */}
           </div>
         </div>
       </div>
