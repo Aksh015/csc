@@ -41,8 +41,10 @@ const Home = () => {
                     </svg>
                   </span>
                 </button>
-                <Link 
-                  to="/join-us"
+                <a 
+                  href="https://docs.google.com/forms/your-form-link-here"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="cursor-hover group relative bg-gradient-to-r from-green-500/20 to-cyan-500/20 hover:from-green-500 hover:to-cyan-500 text-white px-8 py-4 text-base font-semibold rounded-full transition-all duration-300 border-2 border-green-500/50 hover:border-transparent hover:scale-105"
                 >
                   <span className="relative z-10 flex items-center gap-2">
@@ -51,7 +53,7 @@ const Home = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
                     </svg>
                   </span>
-                </Link>
+                </a>
               </div>
             </div>
 

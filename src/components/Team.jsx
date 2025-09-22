@@ -237,16 +237,19 @@ const BoardMemberCard = ({ member, onMemberClick }) => {
       <div className="absolute inset-0 transition-all duration-500 transform group-hover:scale-105">
         {/* Front of the card (always visible) */}
         <div className="absolute inset-0 bg-gray-900 shadow-xl rounded-xl p-6 flex flex-col items-center justify-center">
-          <div className="group-hover:hidden w-38 h-38 rounded-full overflow-hidden mb-4">
+          <div className="w-38 h-38 rounded-full overflow-hidden mb-4">
             <img 
               src={member.image} 
               alt={member.name}
               className="w-full h-full object-cover"
             />
           </div>
-          <h3 className="group-hover:hidden text-xl font-bold text-white mb-2 text-center">{member.name}</h3>
+          <h3 className="group-hover:hidden text-xl font-bold text-white text-center">{member.name}</h3>
           <div className={`group-hover:hidden px-3 py-1 rounded-full text-xs font-semibold ${getRoleColor(member.title)}`}>
            {member.title}
+          </div>
+          <div className="group-hover:hidden bg-gray-900 px-3 rounded-lg text-sm font-semibold shadow-lg">
+            {member.title}
           </div>
         </div>
         
@@ -254,7 +257,7 @@ const BoardMemberCard = ({ member, onMemberClick }) => {
         <div className={`absolute inset-0 bg-gradient-to-br from-green-600/50 to-cyan-600/50 text-gray-900 shadow-xl rounded-xl p-6 flex flex-col justify-center items-center transition-opacity duration-500 ${
           isHovered ? 'opacity-100' : 'opacity-0'
         }`}>
-          <h3 className="text-xl font-bold mb-2 text-center">{member.name}</h3>
+          <h3 className="text-xl font-bold mt-2 text-center">{member.name}</h3>
           <div className={`px-3 py-1 rounded-full text-xs font-semibold mb-4 ${getRoleColor(member.title)}`}>
             {member.title}
           </div>
@@ -274,9 +277,9 @@ const BoardMemberCard = ({ member, onMemberClick }) => {
           </div>
           
           {/* Highlighted Position */}
-          <div className="bg-gray-900 text-green-400 px-3 py-1 rounded-lg text-sm font-bold shadow-lg border border-green-400">
+          {/* <div className="bg-gray-900 text-green-400 px-3 py-1 rounded-lg text-sm font-bold shadow-lg border border-green-400">
             {member.title}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>

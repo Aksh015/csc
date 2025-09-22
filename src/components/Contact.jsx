@@ -173,14 +173,14 @@ const Contact = () => {
           <h3 className="text-2xl font-bold text-white mb-4">Ready to Connect?</h3>
           <p className="text-gray-300 mb-6 max-w-2xl mx-auto">
             Take the first step towards exploring cybersecurity opportunities. 
-            Connect with CSC (Cyber Security Club) and learn more about our activities!
+            Connect with CSC and learn more about our activities!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button 
               onClick={() => window.open('mailto:contact@cybersecurityclub.com', '_blank')}
               className="bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-green-500/25"
             >
-              Join now
+              Join Our WhatsApp Community
             </button>
             {/* <button 
               onClick={() => document.getElementById('events').scrollIntoView({ behavior: 'smooth' })}

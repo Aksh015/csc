@@ -229,7 +229,7 @@ const Events = () => {
                   </div>
 
                   {/* Call to Action */}
-                  <div className="bg-gradient-to-r from-green-900/20 to-cyan-900/20 rounded-xl p-8 border border-green-500/20">
+                  {/* <div className="bg-gradient-to-r from-green-900/20 to-cyan-900/20 rounded-xl p-8 border border-green-500/20">
                     <h4 className="text-2xl font-bold text-white mb-4">Stay Connected!</h4>
                     <p className="text-gray-300 mb-6">
                       Join our WhatsApp community to get instant notifications about new events, 
@@ -244,7 +244,7 @@ const Events = () => {
                         Join Our WhatsApp Community
                       </button>
                     </div>
-                  </div>
+                  </div> */}
 
                   
                 </div>
