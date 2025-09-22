@@ -60,7 +60,7 @@ const Contact = () => {
     title: "Instagram",
     description: "Follow us on Instagram",
     contact: "@CSC_CyberSecurity",
-    link: "https://instagram.com/csc_cybersecurity"
+    link: "https://www.instagram.com/csc.itnu?igsh=b2YyaWtobG82NHN4"
   },
   {
     icon: (
@@ -71,7 +71,7 @@ const Contact = () => {
     title: "LinkedIn",
     description: "Connect professionally",
     contact: "CSC Cyber Security Club",
-    link: "https://linkedin.com/company/csc-cybersecurity"
+    link: "https://www.linkedin.com/in/csc-itnu-41293534a/"
   },
   {
     icon: (

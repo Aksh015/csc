@@ -385,9 +385,9 @@ const Team = () => {
     <div id="team" className="min-h-screen bg-gray-950 text-white py-12">
       <div className="max-w-7xl mx-auto px-4">
         <header className="text-center mb-16">
-          <h1 className="text-5xl font-bold bg-gradient-to-r from-green-400 via-cyan-400 to-green-400 bg-clip-text text-transparent mb-4">
-            Our Team
-          </h1>
+          <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
+            Our <span className="bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">Team</span>
+          </h2>
           <p className="text-xl text-gray-400 max-w-2xl mx-auto">
             Meet the talented individuals behind CSC (Cyber Security Club)
           </p>
