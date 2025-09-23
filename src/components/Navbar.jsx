@@ -162,8 +162,10 @@ const Navbar = () => {
               
               {/* Mobile Join Us Button */}
               <div className="pt-4 pb-3 border-t border-gray-600">
-                <Link 
-                  to="/join-us"
+                <a 
+                  href="https://docs.google.com/forms/your-form-link-here"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   onClick={() => setIsMobileMenuOpen(false)}
                   className="cursor-hover bg-gradient-to-r from-green-600/70 to-cyan-600/70 hover:from-green-500 hover:to-cyan-500 text-white px-4 py-2 rounded-lg text-base font-semibold transition-all duration-300 shadow-lg hover:shadow-green-500/30 border border-green-500/30 hover:border-green-400 flex items-center justify-center gap-2 mx-3"
                 >
@@ -171,7 +173,7 @@ const Navbar = () => {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18 9v3m0 0v3m0-3h3m-3 0h-3m-2-5a4 4 0 11-8 0 4 4 0 018 0zM3 20a6 6 0 0112 0v1H3v-1z" />
                   </svg>
                   Join Us
-                </Link>
+                </a>
               </div>
             </div>
           </div>

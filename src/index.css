@@ -1,17 +1,20 @@
 @import "tailwindcss";
 
 /* Custom Cursor Animations */
-*, *::before, *::after {
-  cursor: none !important; /* Hide default cursor */
-}
+/* Apply cursor hiding only on devices that support hover and have a fine pointer (desktops/laptops) */
+@media (hover: hover) and (pointer: fine) {
+  *, *::before, *::after {
+    cursor: none !important; /* Hide default cursor */
+  }
 
-html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, button, input, textarea, select {
-  cursor: none !important;
-}
+  html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, button, input, textarea, select {
+    cursor: none !important;
+  }
 
-/* Override any Tailwind cursor classes */
-.cursor-pointer, .cursor-default, .cursor-move, .cursor-text, .cursor-wait, .cursor-help {
-  cursor: none !important;
+  /* Override any Tailwind cursor classes */
+  .cursor-pointer, .cursor-default, .cursor-move, .cursor-text, .cursor-wait, .cursor-help {
+    cursor: none !important;
+  }
 }
 
 .custom-cursor {
@@ -25,6 +28,13 @@ html, body, div, span, h1, h2, h3, h4, h5, h6, p, a, button, input, textarea, se
   z-index: 9999;
   transition: transform 0.1s ease;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.4), 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Hide the custom cursor on touch/coarse pointer devices (most phones/tablets) */
+@media (hover: none), (pointer: coarse) {
+  .custom-cursor {
+    display: none !important;
+  }
 }
 
 .custom-cursor::before {
