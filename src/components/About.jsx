@@ -93,10 +93,10 @@ const About = () => {
                   <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63c-.34-1.02-1.31-1.73-2.46-1.73s-2.12.71-2.46 1.73L13.5 16H16v6h4zm-12.5 0v-6.5H9L7.1 9.4c-.18-.5-.72-.9-1.27-.9s-1.09.4-1.27.9L3.5 15.5H5.5V22h2zm2.5-12c1.11 0 2-.89 2-2s-.89-2-2-2-2 .89-2 2 .89 2 2 2z"/>
                 </svg>
               </div>
-              <h4 className="text-xl font-bold text-white mb-4">Industry Connect</h4>
+              <h4 className="text-xl font-bold text-white mb-4">Expert Sessions</h4>
               <p className="text-gray-400">
-                Connect with cybersecurity professionals, attend guest lectures, 
-                and explore internship and career opportunities in the field.
+                We invite industry experts to provide guidance on cybersecurity careers, 
+                internships, job opportunities, and real-world industry insights.
               </p>
             </div>
           </div>
