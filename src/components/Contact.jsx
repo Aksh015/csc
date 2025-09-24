@@ -132,7 +132,7 @@ const Contact = () => {
         </div>
 
         {/* Contact Methods */}
-        <div className="grid grid-cols-4 gap-4 mb-16">
+  <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-16">
           {contactMethods.map((method, index) => (
             <a
               key={index}
