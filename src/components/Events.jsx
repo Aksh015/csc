@@ -56,11 +56,11 @@ const Events = () => {
   };
 
   return (
-    <section id="events" className="py-20 bg-gray-950">
+  <section id="events" className="py-10 bg-gray-950">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Section Header */}
-        <div className="text-center mb-16">
+  <div className="text-center mb-8">
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
             Events & <span className="bg-gradient-to-r from-green-400 to-cyan-400 bg-clip-text text-transparent">Workshops</span>
           </h2>
@@ -71,7 +71,7 @@ const Events = () => {
         </div>
 
         {/* Tab Navigation */}
-        <div className="flex justify-center mb-12">
+  <div className="flex justify-center mb-6">
           <div className="bg-gray-800 rounded-lg p-1 flex">
             <button
               onClick={() => setActiveTab('upcoming')}
@@ -193,39 +193,6 @@ const Events = () => {
                       We're planning some incredible cybersecurity workshops, competitions, and expert talks. 
                       Stay tuned for announcements!
                     </p>
-                  </div>
-
-                  {/* What to Expect Section */}
-                  <div className="grid md:grid-cols-3 gap-8 mb-16">
-                    <div className="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-green-500/50 transition-all duration-300">
-                      <div className="w-16 h-16 bg-gradient-to-r from-green-500 to-cyan-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span className="text-2xl">🛡️</span>
-                      </div>
-                      <h4 className="text-xl font-bold text-white mb-3">Security Workshops</h4>
-                      <p className="text-gray-400 text-sm">
-                        Hands-on workshops covering ethical hacking, penetration testing, and digital forensics
-                      </p>
-                    </div>
-
-                    <div className="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-yellow-500/50 transition-all duration-300">
-                      <div className="w-16 h-16 bg-gradient-to-r from-yellow-500 to-orange-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span className="text-2xl">🏆</span>
-                      </div>
-                      <h4 className="text-xl font-bold text-white mb-3">CTF Competitions</h4>
-                      <p className="text-gray-400 text-sm">
-                        Challenging Capture The Flag competitions to test your cybersecurity skills
-                      </p>
-                    </div>
-
-                    <div className="bg-gray-800 rounded-xl p-6 border border-gray-700 hover:border-cyan-500/50 transition-all duration-300">
-                      <div className="w-16 h-16 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-full flex items-center justify-center mx-auto mb-4">
-                        <span className="text-2xl">🎯</span>
-                      </div>
-                      <h4 className="text-xl font-bold text-white mb-3">Expert Sessions</h4>
-                      <p className="text-gray-400 text-sm">
-                        Industry professionals sharing real-world cybersecurity insights and career guidance
-                      </p>
-                    </div>
                   </div>
                 </div>
               </div>

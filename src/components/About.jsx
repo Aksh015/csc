@@ -54,8 +54,8 @@ const About = () => {
         </div>
 
         {/* What We Do Section */}
-        <div className="mb-16">
-          <h3 className="text-3xl font-bold text-white text-center mb-12">What We Do</h3>
+        <div className="mb-8">
+          <h3 className="text-3xl font-bold text-white text-center mb-6">What We Do</h3>
           <div className="grid md:grid-cols-3 gap-8">
             
             {/* Workshops & Training */}
