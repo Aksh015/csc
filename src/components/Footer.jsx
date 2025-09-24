@@ -46,25 +46,15 @@ const Footer = () => {
                 </svg>
                 <span className="text-gray-400 text-sm">csc.nu@nirmauni.ac.in</span>
               </div>
-              <div className="flex items-center space-x-2">
-                <svg className="w-4 h-4 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clipRule="evenodd"/>
-                </svg>
-                <span className="text-gray-400 text-sm">Cyber Security Club</span>
-              </div>
               
               {/* Social Icons */}
               <div className="flex space-x-3 pt-2">
-                {/* mail */}
-                <a href="#" className="text-gray-400 hover:text-green-400 transition-colors duration-200" target="_blank">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-mail-icon lucide-mail"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
-                </a>
                 {/* insta */}
                 <a href="https://www.instagram.com/csc.itnu?igsh=b2YyaWtobG82NHN4" className="text-gray-400 hover:text-green-400 transition-colors duration-200" target="_blank">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-instagram-icon lucide-instagram"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
                 </a>
                 {/* whatsapp */}
-                <a href="#" className="text-gray-400 hover:text-green-400 transition-colors duration-200" target="_blank">
+                <a href="https://chat.whatsapp.com/CXXozICnzfT6JtIFmivFZ5?mode=ems_copy_t" className="text-gray-400 hover:text-green-400 transition-colors duration-200" target="_blank">
                   <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-messages-square-icon lucide-messages-square"><path d="M16 10a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 14.286V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/><path d="M20 9a2 2 0 0 1 2 2v10.286a.71.71 0 0 1-1.212.502l-2.202-2.202A2 2 0 0 0 17.172 19H10a2 2 0 0 1-2-2v-1"/></svg>
                 </a>
                 {/* linkedin */}
@@ -79,7 +69,7 @@ const Footer = () => {
         {/* Bottom Bar */}
         <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
           <p className="text-gray-400 text-sm">
-            © 2025 CSC (Cyber Security Club). All rights reserved.
+            © 2025 CSC 
           </p>
         </div>
       </div>

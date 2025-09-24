@@ -51,7 +51,7 @@ const Contact = () => {
     title: "Email Us",
     description: "General inquiries",
     contact: "csc.nu@nirmauni.ac.in",
-    link: "mailto:csc.nu@nirmauni.ac.in"
+    link: "https://mail.google.com/mail/u/0/?view=cm&fs=1&to=csc.nu@nirmauni.ac.in&tf=1"
   },
   {
     icon: (
@@ -72,17 +72,6 @@ const Contact = () => {
     description: "Connect professionally",
     contact: "CSC Cyber Security Club",
     link: "https://www.linkedin.com/in/csc-itnu-41293534a/"
-  },
-  {
-    icon: (
-<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-messages-square-icon lucide-messages-square"><path d="M16 10a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 14.286V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/><path d="M20 9a2 2 0 0 1 2 2v10.286a.71.71 0 0 1-1.212.502l-2.202-2.202A2 2 0 0 0 17.172 19H10a2 2 0 0 1-2-2v-1"/></svg>
-
-
-    ),
-    title: "WhatsApp",
-    description: "Chat with us",
-    contact: "+91 98765 43210",
-    link: "https://wa.me/919876543210"
   }
 ];
 
@@ -96,15 +85,15 @@ const Contact = () => {
   const faqData = [
     {
       question: "How can I learn more about CSC (Cyber Security Club)?",
-      answer: "You can contact us directly through email or visit us during office hours. We provide information about our activities and how students can participate in cybersecurity events."
+      answer: "You can contact us directly via LinkedIn. We will reach back to you as soon as possible with information about your queries."
     },
     {
       question: "Are there any prerequisites to participate?",
-      answer: "No specific prerequisites required! We welcome beginners and provide training from basics to advanced levels. Enthusiasm to learn cybersecurity is all you need."
+      answer: "No specific prerequisites required! We welcome beginners and provide training from basics to advanced levels."
     },
     {
       question: "What activities does the club organize?",
-      answer: "We organize workshops, CTF competitions, guest lectures, hands-on training sessions, industry visits, and certification preparation programs throughout the academic year."
+      answer: "We organize workshops, CTF competitions, expert lectures, hands-on training sessions throughout the academic year."
     },
     {
       question: "Is there a membership fee?",
@@ -132,7 +121,7 @@ const Contact = () => {
         </div>
 
         {/* Contact Methods */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {contactMethods.map((method, index) => (
             <a
               key={index}
@@ -176,12 +165,14 @@ const Contact = () => {
             Connect with CSC and learn more about our activities!
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <button 
-              onClick={() => window.open('mailto:contact@cybersecurityclub.com', '_blank')}
-              className="bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-green-500/25"
+            <a 
+              href="https://chat.whatsapp.com/CXXozICnzfT6JtIFmivFZ5?mode=ems_copy_t"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-gradient-to-r from-green-500 to-cyan-500 hover:from-green-600 hover:to-cyan-600 text-white px-8 py-3 rounded-lg font-medium transition-all duration-200 shadow-lg hover:shadow-green-500/25 inline-block text-center"
             >
               Join Our WhatsApp Community
-            </button>
+            </a>
             {/* <button 
               onClick={() => document.getElementById('events').scrollIntoView({ behavior: 'smooth' })}
               className="border border-gray-600 hover:border-green-400 text-gray-300 hover:text-green-400 px-8 py-3 rounded-lg font-medium transition-all duration-200"

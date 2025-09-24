@@ -79,7 +79,7 @@ const Navbar = () => {
           {/* Join Us Button */}
           <div className="hidden md:flex space-x-4">
             <a 
-              href="https://docs.google.com/forms/your-form-link-here"
+              href="https://docs.google.com/forms/d/e/1FAIpQLSc4bSAVnIJfKgnX3X2xPbF6mE7B_80519fAK4hfX0pYu4bmQA/viewform?usp=dialog"
               target="_blank"
               rel="noopener noreferrer"
               className="cursor-hover bg-gradient-to-r from-green-600/70 to-cyan-600/70 hover:from-green-500 hover:to-cyan-500 text-white px-6 py-2 rounded-lg text-sm font-semibold transition-all duration-300 shadow-lg hover:shadow-green-500/30 border border-green-500/30 hover:border-green-400 flex items-center gap-2"
@@ -163,7 +163,7 @@ const Navbar = () => {
               {/* Mobile Join Us Button */}
               <div className="pt-4 pb-3 border-t border-gray-600">
                 <a 
-                  href="https://docs.google.com/forms/your-form-link-here"
+                  href="https://docs.google.com/forms/d/e/1FAIpQLSc4bSAVnIJfKgnX3X2xPbF6mE7B_80519fAK4hfX0pYu4bmQA/viewform?usp=dialog"
                   target="_blank"
                   rel="noopener noreferrer"
                   onClick={() => setIsMobileMenuOpen(false)}

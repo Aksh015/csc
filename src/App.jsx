@@ -7,7 +7,7 @@ import CustomCursor from './components/CustomCursor'
 // Lightweight component to redirect to external form when visiting /join-us
 const RedirectJoin = () => {
   useEffect(() => {
-    const url = 'https://forms.gle/your-google-form-id';
+    const url = 'https://docs.google.com/forms/d/e/1FAIpQLSc4bSAVnIJfKgnX3X2xPbF6mE7B_80519fAK4hfX0pYu4bmQA/viewform?usp=dialog';
     window.open(url, '_blank', 'noopener,noreferrer');
   }, []);
   return null;
