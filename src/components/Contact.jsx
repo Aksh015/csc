@@ -59,8 +59,8 @@ const Contact = () => {
     ),
     title: "Instagram",
     description: "Follow us on Instagram",
-    contact: "@CSC_CyberSecurity",
-    link: "https://www.instagram.com/csc.itnu?igsh=b2YyaWtobG82NHN4"
+    contact: "csc.itnu",
+    link: "https://www.instagram.com/csc.itnu/"
   },
   {
     icon: (
