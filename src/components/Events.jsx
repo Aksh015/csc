@@ -4,51 +4,60 @@ const Events = () => {
   const [activeTab, setActiveTab] = useState('upcoming');
 
   const upcomingEvents = [
-    {
-      id: 1,
-      title: "HACKVERSE - EPISODE 1: THE JOURNEY BEGINS",
-      attendees: "Registration Open - Join Now!",
-      type: "Workshop",
-      highlight:
-        "Step into the exciting world of cybersecurity with hands-on demonstrations of ethical hacking techniques. Perfect for beginners! Experience live hacking demos, learn about online security, and discover the basics of cybersecurity tools.",
-      image: "/images/hackverse_ep1.jpg",
-      date: "October 08, 2025",
-      time: "12:30 pm - 2:30 pm",
-      location: "C - Auditorium",
-      instructor: "CSC Team",
-      seats: "Open Registration",
-      difficulty: "Beginner",
-      registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSc4bSAVnIJfKgnX3X2xPbF6mE7B_80519fAK4hfX0pYu4bmQA/viewform"
-    }
+    // {
+    //   id: 1,
+    //   title: "HACKVERSE - EPISODE 1: THE JOURNEY BEGINS",
+    //   attendees: "Registration Open - Join Now!",
+    //   type: "Workshop",
+    //   highlight:
+    //     "Step into the exciting world of cybersecurity with hands-on demonstrations of ethical hacking techniques. Perfect for beginners! Experience live hacking demos, learn about online security, and discover the basics of cybersecurity tools.",
+    //   image: "/images/hackverse_ep1.jpg",
+    //   date: "October 08, 2025",
+    //   time: "12:30 pm - 2:30 pm",
+    //   location: "C - Auditorium",
+    //   instructor: "CSC Team",
+    //   seats: "Open Registration",
+    //   difficulty: "Beginner",
+    //   registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSc4bSAVnIJfKgnX3X2xPbF6mE7B_80519fAK4hfX0pYu4bmQA/viewform"
+    // }
   ];
 
   const pastEvents = [
     {
       id: 1,
+      title: "HACKVERSE - Episode 1: The journey begins",
+      attendees: "200+ participants",
+      type: "Workshop",
+      highlight:
+        "An engaging session by Devarsh Dalwadi & Dhruv Padhiyar introducing students with hands-on demonstrations of ethical hacking techniques",
+      image: "/images/event1.jpg"
+    },
+    {
+      id: 2,
       title: "CSGC - 2.0 Briefing",
       attendees: "95 participants",
       type: "Workshop",
       highlight:
         "An engaging session by Mr. Hemang Prakhar introducing students to the Cybersecurity Grand Challenge 2.0",
-      image: "/images/event1.jpg"
+      image: "/images/event2.jpg"
     },
     {
-      id: 2,
+      id: 3,
       title: "Expert Lecture on Careers in Cybersecurity",
       attendees: "88 participants",
       type: "Guest Lecture",
       highlight:
         "The session provided key insights which helped students to kickstart their career in Cybersecurity domain by Mr. Sandip Jadav",
-      image: "/images/event2.jpg"
+      image: "/images/event3.jpg"
     },
     {
-      id: 3,
+      id: 4,
       title: "Cyber Awareness Session",
       attendees: "92 participants",
       type: "Workshop",
       highlight:
         "Cyber Jagrukta - Dr. Uday Pratap Rao guided our M.Tech. in Cybersecurity students to a safe digital world",
-      image: "/images/event3.jpg"
+      image: "/images/event4.jpg"
     }
   ];
 
@@ -105,7 +114,13 @@ const Events = () => {
         {/* Upcoming Event (PlaceMate Style) */}
         {activeTab === 'upcoming' && (
           <div>
-            {upcomingEvents.map((event) => (
+            {upcomingEvents.length === 0 ? (
+      <div className="text-center py-20">
+        <h3 className="text-3xl font-bold text-gray-300">
+          🚀 No upcoming events right now!
+        </h3>
+      </div>
+    ) : (upcomingEvents.map((event) => (
               <div key={event.id} className="max-w-6xl mx-auto grid md:grid-cols-12 gap-8 items-center">
                 
                 {/* Left Poster */}
@@ -166,7 +181,7 @@ const Events = () => {
                   </a>
                 </div>
               </div>
-            ))}
+            )))}
           </div>
         )}
 
