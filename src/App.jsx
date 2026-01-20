@@ -1,8 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Home from './components/Home'
 import CustomCursor from './components/CustomCursor'
+import HomePage from './pages/HomePage'
+import AboutPage from './pages/AboutPage'
+import EventsPage from './pages/EventsPage'
+import TeamPage from './pages/TeamPage'
+import ContactPage from './pages/ContactPage'
 
 // Lightweight component to redirect to external form when visiting /join-us
 const RedirectJoin = () => {
@@ -42,7 +46,12 @@ function App() {
         <Navbar />
         
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<HomePage />} />
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/about" element={<AboutPage />} />
+          <Route path="/events" element={<EventsPage />} />
+          <Route path="/team" element={<TeamPage />} />
+          <Route path="/contact" element={<ContactPage />} />
           <Route path="/join-us" element={<RedirectJoin />} />
         </Routes>
       </div>

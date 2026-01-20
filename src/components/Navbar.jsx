@@ -1,30 +1,14 @@
 import React, { useState } from 'react';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import cscLogo from '../assets/team/csc-logo.png';
 
 
 const Navbar = () => {
-  const navigate = useNavigate();
   const location = useLocation();
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  const handleNavClick = (sectionId) => {
-    if (location.pathname !== '/') {
-      // If not on home page, navigate to home first, then scroll
-      navigate('/');
-      setTimeout(() => {
-        const element = document.getElementById(sectionId);
-        if (element) {
-          element.scrollIntoView({ behavior: 'smooth' });
-        }
-      }, 100);
-    } else {
-      // If already on home page, just scroll to section
-      const element = document.getElementById(sectionId);
-      if (element) {
-        element.scrollIntoView({ behavior: 'smooth' });
-      }
-    }
+  const isActive = (path) => {
+    return location.pathname === path;
   };
 
   return (
@@ -44,36 +28,56 @@ const Navbar = () => {
 
           {/* Navigation Links */}
           <div className="hidden md:flex space-x-10">
-            <button 
-              onClick={() => handleNavClick('home')}
-              className="cursor-hover text-gray-200 hover:text-green-400 hover:bg-green-500/10 px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 border-transparent hover:border-green-400"
+            <Link 
+              to="/home"
+              className={`cursor-hover px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 ${
+                isActive('/home') || isActive('/')
+                  ? 'text-green-400 border-green-400 bg-green-500/10'
+                  : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10 border-transparent hover:border-green-400'
+              }`}
             >
               Home
-            </button>
-            <button 
-              onClick={() => handleNavClick('about')}
-              className="cursor-hover text-gray-200 hover:text-green-400 hover:bg-green-500/10 px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 border-transparent hover:border-green-400"
+            </Link>
+            <Link 
+              to="/about"
+              className={`cursor-hover px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 ${
+                isActive('/about')
+                  ? 'text-green-400 border-green-400 bg-green-500/10'
+                  : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10 border-transparent hover:border-green-400'
+              }`}
             >
               About
-            </button>
-            <button 
-              onClick={() => handleNavClick('events')}
-              className="cursor-hover text-gray-200 hover:text-green-400 hover:bg-green-500/10 px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 border-transparent hover:border-green-400"
+            </Link>
+            <Link 
+              to="/events"
+              className={`cursor-hover px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 ${
+                isActive('/events')
+                  ? 'text-green-400 border-green-400 bg-green-500/10'
+                  : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10 border-transparent hover:border-green-400'
+              }`}
             >
               Events
-            </button>
-            <button 
-              onClick={() => handleNavClick('team')}
-              className="cursor-hover text-gray-200 hover:text-green-400 hover:bg-green-500/10 px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 border-transparent hover:border-green-400"
+            </Link>
+            <Link 
+              to="/team"
+              className={`cursor-hover px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 ${
+                isActive('/team')
+                  ? 'text-green-400 border-green-400 bg-green-500/10'
+                  : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10 border-transparent hover:border-green-400'
+              }`}
             >
               Team
-            </button>
-            <button 
-              onClick={() => handleNavClick('contact')}
-              className="cursor-hover text-gray-200 hover:text-green-400 hover:bg-green-500/10 px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 border-transparent hover:border-green-400"
+            </Link>
+            <Link 
+              to="/contact"
+              className={`cursor-hover px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 ${
+                isActive('/contact')
+                  ? 'text-green-400 border-green-400 bg-green-500/10'
+                  : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10 border-transparent hover:border-green-400'
+              }`}
             >
               Contact
-            </button>
+            </Link>
           </div>
 
           {/* Join Us Button */}
@@ -119,51 +123,61 @@ const Navbar = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden bg-black/50 backdrop-blur-sm border-t border-green-500/20">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <button 
-                onClick={() => {
-                  handleNavClick('home');
-                  setIsMobileMenuOpen(false);
-                }}
-                className="cursor-hover text-gray-200 hover:text-green-400 hover:bg-green-500/10 block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-all duration-300"
+              <Link 
+                to="/home"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`cursor-hover block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-all duration-300 ${
+                  isActive('/home') || isActive('/')
+                    ? 'text-green-400 bg-green-500/10'
+                    : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10'
+                }`}
               >
                 Home
-              </button>
-              <button 
-                onClick={() => {
-                  handleNavClick('about');
-                  setIsMobileMenuOpen(false);
-                }}
-                className="cursor-hover text-gray-200 hover:text-green-400 hover:bg-green-500/10 block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-all duration-300"
+              </Link>
+              <Link 
+                to="/about"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`cursor-hover block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-all duration-300 ${
+                  isActive('/about')
+                    ? 'text-green-400 bg-green-500/10'
+                    : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10'
+                }`}
               >
                 About
-              </button>
-              <button 
-                onClick={() => {
-                  handleNavClick('events');
-                  setIsMobileMenuOpen(false);
-                }}
-                className="cursor-hover text-gray-200 hover:text-green-400 hover:bg-green-500/10 block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-all duration-300"
+              </Link>
+              <Link 
+                to="/events"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`cursor-hover block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-all duration-300 ${
+                  isActive('/events')
+                    ? 'text-green-400 bg-green-500/10'
+                    : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10'
+                }`}
               >
                 Events
-              </button>
-              <button 
-                onClick={() => {
-                  handleNavClick('team');
-                  setIsMobileMenuOpen(false);
-                }}
-                className="cursor-hover text-gray-200 hover:text-green-400 hover:bg-green-500/10 block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-all duration-300"
+              </Link>
+              <Link 
+                to="/team"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`cursor-hover block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-all duration-300 ${
+                  isActive('/team')
+                    ? 'text-green-400 bg-green-500/10'
+                    : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10'
+                }`}
               >
                 Team
-              </button>
-              <button 
-                onClick={() => {
-                  handleNavClick('contact');
-                  setIsMobileMenuOpen(false);
-                }}
-                className="cursor-hover text-gray-200 hover:text-green-400 hover:bg-green-500/10 block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-all duration-300"
+              </Link>
+              <Link 
+                to="/contact"
+                onClick={() => setIsMobileMenuOpen(false)}
+                className={`cursor-hover block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-all duration-300 ${
+                  isActive('/contact')
+                    ? 'text-green-400 bg-green-500/10'
+                    : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10'
+                }`}
               >
                 Contact
-              </button>
+              </Link>
               
               {/* Mobile Join Us Button */}
               <div className="pt-4 pb-3 border-t border-gray-600">
