@@ -28,53 +28,48 @@ const Navbar = () => {
 
           {/* Navigation Links */}
           <div className="hidden md:flex space-x-10">
-            <Link 
+            <Link
               to="/home"
-              className={`cursor-hover px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 ${
-                isActive('/home') || isActive('/')
-                  ? 'text-green-400 border-green-400 bg-green-500/10'
-                  : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10 border-transparent hover:border-green-400'
-              }`}
+              className={`cursor-hover px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 ${isActive('/home') || isActive('/')
+                ? 'text-green-400 border-green-400 bg-green-500/10'
+                : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10 border-transparent hover:border-green-400'
+                }`}
             >
               Home
             </Link>
-            <Link 
+            <Link
               to="/about"
-              className={`cursor-hover px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 ${
-                isActive('/about')
-                  ? 'text-green-400 border-green-400 bg-green-500/10'
-                  : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10 border-transparent hover:border-green-400'
-              }`}
+              className={`cursor-hover px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 ${isActive('/about')
+                ? 'text-green-400 border-green-400 bg-green-500/10'
+                : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10 border-transparent hover:border-green-400'
+                }`}
             >
               About
             </Link>
-            <Link 
+            <Link
               to="/events"
-              className={`cursor-hover px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 ${
-                isActive('/events')
-                  ? 'text-green-400 border-green-400 bg-green-500/10'
-                  : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10 border-transparent hover:border-green-400'
-              }`}
+              className={`cursor-hover px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 ${isActive('/events')
+                ? 'text-green-400 border-green-400 bg-green-500/10'
+                : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10 border-transparent hover:border-green-400'
+                }`}
             >
               Events
             </Link>
-            <Link 
+            <Link
               to="/team"
-              className={`cursor-hover px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 ${
-                isActive('/team')
-                  ? 'text-green-400 border-green-400 bg-green-500/10'
-                  : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10 border-transparent hover:border-green-400'
-              }`}
+              className={`cursor-hover px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 ${isActive('/team')
+                ? 'text-green-400 border-green-400 bg-green-500/10'
+                : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10 border-transparent hover:border-green-400'
+                }`}
             >
               Team
             </Link>
-            <Link 
+            <Link
               to="/contact"
-              className={`cursor-hover px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 ${
-                isActive('/contact')
-                  ? 'text-green-400 border-green-400 bg-green-500/10'
-                  : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10 border-transparent hover:border-green-400'
-              }`}
+              className={`cursor-hover px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 ${isActive('/contact')
+                ? 'text-green-400 border-green-400 bg-green-500/10'
+                : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10 border-transparent hover:border-green-400'
+                }`}
             >
               Contact
             </Link>
@@ -102,7 +97,7 @@ const Navbar = () => {
 
           {/* Mobile menu button */}
           <div className="md:hidden">
-            <button 
+            <button
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               className="text-gray-200 hover:text-green-400 hover:bg-green-500/10  p-3 rounded-lg transition-all duration-300"
             >
@@ -123,65 +118,60 @@ const Navbar = () => {
         {isMobileMenuOpen && (
           <div className="md:hidden bg-black/50 backdrop-blur-sm border-t border-green-500/20">
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-              <Link 
+              <Link
                 to="/home"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`cursor-hover block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-all duration-300 ${
-                  isActive('/home') || isActive('/')
-                    ? 'text-green-400 bg-green-500/10'
-                    : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10'
-                }`}
+                className={`cursor-hover block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-all duration-300 ${isActive('/home') || isActive('/')
+                  ? 'text-green-400 bg-green-500/10'
+                  : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10'
+                  }`}
               >
                 Home
               </Link>
-              <Link 
+              <Link
                 to="/about"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`cursor-hover block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-all duration-300 ${
-                  isActive('/about')
-                    ? 'text-green-400 bg-green-500/10'
-                    : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10'
-                }`}
+                className={`cursor-hover block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-all duration-300 ${isActive('/about')
+                  ? 'text-green-400 bg-green-500/10'
+                  : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10'
+                  }`}
               >
                 About
               </Link>
-              <Link 
+              <Link
                 to="/events"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`cursor-hover block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-all duration-300 ${
-                  isActive('/events')
-                    ? 'text-green-400 bg-green-500/10'
-                    : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10'
-                }`}
+                className={`cursor-hover block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-all duration-300 ${isActive('/events')
+                  ? 'text-green-400 bg-green-500/10'
+                  : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10'
+                  }`}
               >
                 Events
               </Link>
-              <Link 
+              <Link
                 to="/team"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`cursor-hover block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-all duration-300 ${
-                  isActive('/team')
-                    ? 'text-green-400 bg-green-500/10'
-                    : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10'
-                }`}
+                className={`cursor-hover block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-all duration-300 ${isActive('/team')
+                  ? 'text-green-400 bg-green-500/10'
+                  : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10'
+                  }`}
               >
                 Team
               </Link>
-              <Link 
+              <Link
                 to="/contact"
                 onClick={() => setIsMobileMenuOpen(false)}
-                className={`cursor-hover block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-all duration-300 ${
-                  isActive('/contact')
-                    ? 'text-green-400 bg-green-500/10'
-                    : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10'
-                }`}
+                className={`cursor-hover block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-all duration-300 ${isActive('/contact')
+                  ? 'text-green-400 bg-green-500/10'
+                  : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10'
+                  }`}
               >
                 Contact
               </Link>
-              
+
               {/* Mobile Join Us Button */}
               <div className="pt-4 pb-3 border-t border-gray-600">
-                <a 
+                <a
                   href="https://docs.google.com/forms/d/e/1FAIpQLSc4bSAVnIJfKgnX3X2xPbF6mE7B_80519fAK4hfX0pYu4bmQA/viewform?usp=dialog"
                   target="_blank"
                   rel="noopener noreferrer"

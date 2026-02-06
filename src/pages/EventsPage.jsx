@@ -1,12 +1,10 @@
 import React from 'react';
 import Events from '../components/Events';
-import Footer from '../components/Footer';
 
 const EventsPage = () => {
   return (
     <>
       <Events />
-      <Footer />
     </>
   );
 };

@@ -1,10 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
+import Footer from './components/Footer'
 import CustomCursor from './components/CustomCursor'
 import HomePage from './pages/HomePage'
 import AboutPage from './pages/AboutPage'
 import EventsPage from './pages/EventsPage'
+import EventDetailsPage from './pages/EventDetailsPage'
 import TeamPage from './pages/TeamPage'
 import ContactPage from './pages/ContactPage'
 
@@ -44,16 +46,19 @@ function App() {
       <div className="min-h-screen bg-gray-950 text-white">
         {showCustomCursor && <CustomCursor />}
         <Navbar />
-        
+
         <Routes>
           <Route path="/" element={<HomePage />} />
           <Route path="/home" element={<HomePage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/events" element={<EventsPage />} />
+          <Route path="/events/:eventname" element={<EventDetailsPage />} />
           <Route path="/team" element={<TeamPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/join-us" element={<RedirectJoin />} />
         </Routes>
+
+        <Footer />
       </div>
     </Router>
   );
