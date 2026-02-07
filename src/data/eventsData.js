@@ -46,10 +46,9 @@ export const eventsData = [
         description: "The session provided key insights which helped students to kickstart their career in Cybersecurity domain. Mr. Sandip Jadav shared his industry experience and guided students on the various career paths available.",
         image: "/images/expert_lec.jpg",
         slug: "expert-lecture-careers",
-        date: "July 10, 2025",
-        time: "12:30 PM - 2:30 PM",
+        date: "July 29, 2025",
+        time: "9.50 AM - 11:40 AM",
         location: "W 501",
-
         participants: "150+"
     },
     {
@@ -58,8 +57,8 @@ export const eventsData = [
         description: "Dr. Uday Pratap Rao guided our M.Tech. in Cybersecurity students to a safe digital world. The session focused on best practices for digital hygiene and awareness against social engineering attacks.",
         image: "/images/cyber_awareness.jpg",
         slug: "cyber-awareness-session",
-        date: "June 5, 2025",
-        time: "12:30 PM - 2:30 PM",
+        date: "March 5, 2025",
+        time: "9:30 AM - 11:30 AM",
         location: "E Block",
         participants: "120+"
     }

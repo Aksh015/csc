@@ -1,7 +1,12 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import cscLogo from '../assets/team/csc-logo.jpg';
 
 const Footer = () => {
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <footer className="bg-gray-900 border-t border-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -28,10 +33,10 @@ const Footer = () => {
           <div>
             <h4 className="text-white font-semibold mb-4">Quick Links</h4>
             <ul className="space-y-2">
-              <li><a href="#about" className="text-gray-400 hover:text-green-400 text-sm transition-colors duration-200">About Us</a></li>
-              <li><a href="#events" className="text-gray-400 hover:text-green-400 text-sm transition-colors duration-200">Events</a></li>
-              <li><a href="#team" className="text-gray-400 hover:text-green-400 text-sm transition-colors duration-200">Team</a></li>
-              <li><a href="#contact" className="text-gray-400 hover:text-green-400 text-sm transition-colors duration-200">Contact</a></li>
+              <li><Link to="/about" onClick={scrollToTop} className="text-gray-400 hover:text-green-400 text-sm transition-colors duration-200">About Us</Link></li>
+              <li><Link to="/events" onClick={scrollToTop} className="text-gray-400 hover:text-green-400 text-sm transition-colors duration-200">Events</Link></li>
+              <li><Link to="/team" onClick={scrollToTop} className="text-gray-400 hover:text-green-400 text-sm transition-colors duration-200">Team</Link></li>
+              <li><Link to="/contact" onClick={scrollToTop} className="text-gray-400 hover:text-green-400 text-sm transition-colors duration-200">Contact</Link></li>
             </ul>
           </div>
 

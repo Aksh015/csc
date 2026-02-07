@@ -11,6 +11,10 @@ const Navbar = () => {
     return location.pathname === path;
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <nav className="bg-gradient-to-r from-gray-900 via-gray-800 to-gray-900 border-b border-green-500/20 sticky top-0 z-50 backdrop-blur-md bg-opacity-95 shadow-lg shadow-green-500/10 ">
       <div className="max-w-7xl mx-auto px-6 sm:px-8 lg:px-10">
@@ -30,6 +34,7 @@ const Navbar = () => {
           <div className="hidden md:flex space-x-10">
             <Link
               to="/home"
+              onClick={scrollToTop}
               className={`cursor-hover px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 ${isActive('/home') || isActive('/')
                 ? 'text-green-400 border-green-400 bg-green-500/10'
                 : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10 border-transparent hover:border-green-400'
@@ -39,6 +44,7 @@ const Navbar = () => {
             </Link>
             <Link
               to="/about"
+              onClick={scrollToTop}
               className={`cursor-hover px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 ${isActive('/about')
                 ? 'text-green-400 border-green-400 bg-green-500/10'
                 : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10 border-transparent hover:border-green-400'
@@ -48,6 +54,7 @@ const Navbar = () => {
             </Link>
             <Link
               to="/events"
+              onClick={scrollToTop}
               className={`cursor-hover px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 ${isActive('/events')
                 ? 'text-green-400 border-green-400 bg-green-500/10'
                 : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10 border-transparent hover:border-green-400'
@@ -57,6 +64,7 @@ const Navbar = () => {
             </Link>
             <Link
               to="/team"
+              onClick={scrollToTop}
               className={`cursor-hover px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 ${isActive('/team')
                 ? 'text-green-400 border-green-400 bg-green-500/10'
                 : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10 border-transparent hover:border-green-400'
@@ -66,6 +74,7 @@ const Navbar = () => {
             </Link>
             <Link
               to="/contact"
+              onClick={scrollToTop}
               className={`cursor-hover px-4 py-3 text-base font-semibold rounded-lg transition-all duration-300 border-b-2 ${isActive('/contact')
                 ? 'text-green-400 border-green-400 bg-green-500/10'
                 : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10 border-transparent hover:border-green-400'
@@ -120,7 +129,7 @@ const Navbar = () => {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
               <Link
                 to="/home"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => { scrollToTop(); setIsMobileMenuOpen(false); }}
                 className={`cursor-hover block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-all duration-300 ${isActive('/home') || isActive('/')
                   ? 'text-green-400 bg-green-500/10'
                   : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10'
@@ -130,7 +139,7 @@ const Navbar = () => {
               </Link>
               <Link
                 to="/about"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => { scrollToTop(); setIsMobileMenuOpen(false); }}
                 className={`cursor-hover block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-all duration-300 ${isActive('/about')
                   ? 'text-green-400 bg-green-500/10'
                   : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10'
@@ -140,7 +149,7 @@ const Navbar = () => {
               </Link>
               <Link
                 to="/events"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => { scrollToTop(); setIsMobileMenuOpen(false); }}
                 className={`cursor-hover block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-all duration-300 ${isActive('/events')
                   ? 'text-green-400 bg-green-500/10'
                   : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10'
@@ -150,7 +159,7 @@ const Navbar = () => {
               </Link>
               <Link
                 to="/team"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => { scrollToTop(); setIsMobileMenuOpen(false); }}
                 className={`cursor-hover block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-all duration-300 ${isActive('/team')
                   ? 'text-green-400 bg-green-500/10'
                   : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10'
@@ -160,7 +169,7 @@ const Navbar = () => {
               </Link>
               <Link
                 to="/contact"
-                onClick={() => setIsMobileMenuOpen(false)}
+                onClick={() => { scrollToTop(); setIsMobileMenuOpen(false); }}
                 className={`cursor-hover block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-all duration-300 ${isActive('/contact')
                   ? 'text-green-400 bg-green-500/10'
                   : 'text-gray-200 hover:text-green-400 hover:bg-green-500/10'
